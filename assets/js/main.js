@@ -190,4 +190,62 @@ $(document).ready(function () {
     },
   });
   //----------- swiper slider end here -----------
+
+  //----------- Theme Switcher (Dark / Light Mode) -----------
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('.theme-icon') : null;
+  const themeLabel = themeToggleBtn ? themeToggleBtn.querySelector('.theme-label') : null;
+
+  function updateThemeUI(theme) {
+    if (!themeToggleBtn) return;
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      if (themeIcon) themeIcon.textContent = '☀️';
+      if (themeLabel) themeLabel.textContent = 'Light';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      if (themeIcon) themeIcon.textContent = '🌙';
+      if (themeLabel) themeLabel.textContent = 'Dark';
+    }
+  }
+
+  // Initial theme check
+  const savedTheme = localStorage.getItem('giga_theme') || 
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  updateThemeUI(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('giga_theme', next);
+      updateThemeUI(next);
+    });
+  }
+
+  //----------- Company Category Filter -----------
+  $('.company-filter-btn').on('click', function () {
+    $('.company-filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    const filter = $(this).attr('data-filter');
+    if (filter === 'all') {
+      $('.company-item').fadeIn(300);
+    } else {
+      $('.company-item').hide();
+      $('.company-item[data-category="' + filter + '"]').fadeIn(300);
+    }
+  });
+
+  // Smooth scroll for in-page anchors
+  $('a[href^="#"]').on('click', function (e) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      e.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 90
+      }, 700);
+      $('.navbar-collapse').collapse('hide');
+    }
+  });
 });
