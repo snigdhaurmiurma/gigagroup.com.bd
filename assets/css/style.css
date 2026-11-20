@@ -644,63 +644,24 @@ h6 {
 
 /* ==== about_us start here ==== */
 .about_us .container {
-  display: grid;
-  gap: 50px;
-  align-items: center;
+  display: block !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
 }
-
 .about_us .image_holder {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 100%;
 }
-
-.about_us .container p {
-  margin-top: 20px;
-  text-align: center;
-}
-
 .about_us .content {
-  /* margin: 100px 0; */
-  text-align: center;
+  text-align: start;
+  width: 100%;
 }
-.about_us .content .btn_holder {
-  justify-self: start;
-  display: flex;
-  justify-content: center;
-}
-
-.about_us .content a {
-  background-color: #f36523;
-  border: hidden;
-  padding: 15px 30px;
-  border-radius: 35px;
-  color: var(--white);
-  transition: all 0.4s;
-}
-
-.about_us .content a:hover {
-  background-color: var(--white);
-  color: #f36523;
-}
-
-@media (min-width: 768px) {
-}
-
 @media (min-width: 992px) {
   .about_us .container {
-    grid-template-columns: 40% auto;
-  }
-  .about_us .content {
-    text-align: start;
-  }
-  .about_us .content .btn_holder {
-    justify-content: start;
-  }
-  .about_us .container p {
-    text-align: start;
+    display: block !important;
+    grid-template-columns: none !important;
   }
 }
-
 /* ==== about_us end here ==== */
 
 /* ==== Blogs start here ==== */

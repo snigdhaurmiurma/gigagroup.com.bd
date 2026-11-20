@@ -10,7 +10,6 @@
     
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
-    <!-- Pre-load Dark Theme Script -->
     <script>
       (function() {
         var savedTheme = localStorage.getItem('giga_theme');
@@ -224,9 +223,10 @@
     </header>
     <!-- Header End -->
 
-    <!-- Hero / Breadcrumb Section -->
-    <section class="company-hero-banner">
-        <div class="container">
+    <!-- Hero / Breadcrumb Section with Watermark -->
+    <section class="company-hero-banner watermark-section">
+        <div class="watermark-bg-text">DIGITAL AGENCY</div>
+        <div class="container position-relative" style="z-index: 1;">
             <nav class="breadcrumb-nav mb-3" aria-label="breadcrumb">
                 <a href="index.html">Home</a>
                 <span class="mx-2">&rsaquo;</span>
@@ -269,25 +269,25 @@
                 
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="450" data-suffix="+">0</h3>
+                            <h3 class="stat-number live-counter" data-target="450" data-suffix="+">450+</h3>
                             <p>Campaigns Executed</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="4.2" data-decimals="1" data-suffix="x">0</h3>
+                            <h3 class="stat-number live-counter" data-target="4.2" data-decimals="1" data-suffix="x">4.2x</h3>
                             <p>Average Client ROAS</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="15" data-suffix="M+">0</h3>
+                            <h3 class="stat-number live-counter" data-target="15" data-suffix="M+">15M+</h3>
                             <p>Monthly Ad Reach</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="98" data-suffix="%">0</h3>
+                            <h3 class="stat-number live-counter" data-target="98" data-suffix="%">98%</h3>
                             <p>Client Retention</p>
                         </div>
                     </div>
@@ -295,50 +295,58 @@
         </div>
     </section>
 
-    <!-- Live Website View / Platform Showcase Section -->
-    <section class="py-5" id="website_view">
-        <div class="container">
+    <!-- Broad Live Website Showcase Section with Watermark -->
+    <section class="py-5 watermark-section" id="website_view">
+        <div class="watermark-bg-text">DIGITAL AGENCY</div>
+        <div class="container broad-preview-container position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-4" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Digital Presence &amp; Interface</span>
                 <h2 class="display-6 fw-bold">Live Portal Showcase</h2>
-                <p class="text-secondary mx-auto max-w-650">Experience the online systems and interface powering Giga Digital Agency.</p>
+                <p class="text-secondary mx-auto max-w-650">Experience the online systems and interface powering Giga Digital Agency. Click anywhere on the frame to launch the full website.</p>
             </div>
 
             
-                    <div class="browser-mockup-frame" data-aos="zoom-in">
-                        <div class="browser-header-bar">
-                            <div class="browser-dots">
-                                <span class="browser-dot red"></span>
-                                <span class="browser-dot yellow"></span>
-                                <span class="browser-dot green"></span>
-                            </div>
-                            <div class="browser-address-bar">
-                                <span>🔒</span>
-                                <span>https://giga-digital-agency.vercel.app</span>
-                            </div>
-                            <div class="browser-actions">
-                                <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm fw-bold">
-                                    Open Live ↗
-                                </a>
-                            </div>
-                        </div>
-                        <div class="browser-viewport">
-                            <iframe src="https://giga-digital-agency.vercel.app/" title="Giga Digital Agency Live View" loading="lazy"></iframe>
-                        </div>
+            <div class="broad-browser-mockup" onclick="window.open('https://giga-digital-agency.vercel.app/', '_blank')" title="Click to open Giga Digital Agency official website in a new tab" data-aos="zoom-in">
+                <div class="broad-browser-bar">
+                    <div class="browser-dots">
+                        <span class="browser-dot red"></span>
+                        <span class="browser-dot yellow"></span>
+                        <span class="browser-dot green"></span>
                     </div>
+                    <div class="browser-address-bar">
+                        <span>🔒</span>
+                        <span>https://giga-digital-agency.vercel.app</span>
+                        <span class="badge bg-success ms-auto d-none d-sm-inline-block">🟢 Active Online</span>
+                    </div>
+                    <div class="browser-actions">
+                        <span class="btn btn-danger btn-sm fw-bold">
+                            Open Full Site ↗
+                        </span>
+                    </div>
+                </div>
+                <div class="broad-viewport">
+                    <iframe src="https://giga-digital-agency.vercel.app/" title="Giga Digital Agency Live View" loading="lazy"></iframe>
+                    <div class="broad-click-overlay">
+                        <span class="badge bg-dark p-2 px-3 text-white shadow-lg border border-danger">
+                            👉 Click anywhere on window to open Giga Digital Agency ↗
+                        </span>
+                    </div>
+                </div>
+            </div>
             
             
-            <div class="text-center mt-3">
-                <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger px-4 py-2 fw-bold">
-                    Open Giga Digital Agency In Full Window ↗
+            <div class="text-center mt-4">
+                <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg px-5 py-2 fw-bold shadow">
+                    🚀 Launch Giga Digital Agency Full Screen ↗
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Solutions & Products Section -->
-    <section class="py-5 bg-light" id="solutions">
-        <div class="container">
+    <!-- Detailed Solutions & Products Section with Transition Cards & Watermark -->
+    <section class="py-5 bg-light watermark-section" id="solutions">
+        <div class="watermark-bg-text">DIGITAL AGENCY</div>
+        <div class="container position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Products &amp; Capabilities</span>
                 <h2 class="display-6 fw-bold">Enterprise Solutions &amp; Offerings</h2>
@@ -391,7 +399,7 @@
                 </div>
             </div>
 
-            <!-- Tech Stack & Methodologies -->
+            <!-- Tech Stack & Standards -->
             <div class="p-4 bg-white border rounded-4 shadow-sm mt-5 text-center" data-aos="fade-up">
                 <h5 class="fw-bold mb-3">Core Technologies &amp; Industry Standards</h5>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -401,7 +409,7 @@
         </div>
     </section>
 
-    <!-- Inter-Company Navigation: Seamlessly Switch Between Sister Concerns (NO \n BUG) -->
+    <!-- Inter-Company Navigation (Zero \n Bug) -->
     <section class="container py-4">
         <div class="inter-company-nav-wrapper text-center" data-aos="fade-up">
             <h5 class="fw-bold mb-1">Explore Other Giga Group Sister Concerns</h5>
@@ -472,7 +480,6 @@
         </div>
     </section>
 
-    <!-- Clean Corporate Footer -->
     
     <footer class="flex_container footer pt-5 pb-3">
         <div class="container">
@@ -487,7 +494,6 @@
                             Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
                         </p>
                         
-                        <!-- Social Icons -->
                         <div class="social_icons d-flex gap-2">
                             <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Facebook">
                                 <img src="assets/images/facebook.png" alt="Facebook" width="20">
@@ -502,7 +508,7 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Center - Sister Concerns Directory (All 10 Companies Workable) -->
+                <!-- Col 2: Center - Sister Concerns Directory -->
                 <div class="col-lg-5 col-md-7">
                     <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
                     <div class="row g-2">
@@ -547,7 +553,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom Copyright Bar -->
             <div class="footer-bottom-bar border-top pt-3 mt-4">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">

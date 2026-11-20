@@ -21,7 +21,7 @@ $(document).ready(function () {
   // ----------- Dynamic Background end here -----------
 
   //----------- scroll_to_top start here -----------
-  $('a.to_top').mPageScroll2id({ scrollSpeed: 900 });
+  if ($.fn && typeof $.fn.mPageScroll2id === 'function') { $('a.to_top').mPageScroll2id({ scrollSpeed: 900 }); }
   //----------- scroll_to_top end here -----------
 
   //----------- preloader start here -----------
@@ -251,55 +251,108 @@ $(document).ready(function () {
     }
   });
 
-  //----------- Live Animated Number Counters -----------
-  function initLiveCounters() {
+  
+  //----------- Bulletproof Live Animated Number Counters -----------
+  function startCounterAnimation(el) {
+    if (el.dataset.counterStarted) return;
+    el.dataset.counterStarted = "true";
+
+    var targetVal = parseFloat(el.getAttribute('data-target')) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var duration = 1600;
+    var start = performance.now();
+
+    function updateNumber(now) {
+      var progress = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = targetVal * ease;
+
+      if (decimals > 0) {
+        el.textContent = prefix + current.toFixed(decimals) + suffix;
+      } else {
+        el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(updateNumber);
+      } else {
+        if (decimals > 0) {
+          el.textContent = prefix + targetVal.toFixed(decimals) + suffix;
+        } else {
+          el.textContent = prefix + targetVal.toLocaleString() + suffix;
+        }
+      }
+    }
+
+    requestAnimationFrame(updateNumber);
+  }
+
+  function initAllCounters() {
     var counters = document.querySelectorAll('.live-counter');
     if (!counters.length) return;
 
-    var observer = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var targetVal = parseFloat(el.getAttribute('data-target')) || 0;
-          var suffix = el.getAttribute('data-suffix') || '';
-          var prefix = el.getAttribute('data-prefix') || '';
-          var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-          var duration = 1800;
-          var start = performance.now();
-
-          function step(now) {
-            var progress = Math.min((now - start) / duration, 1);
-            // Ease out cubic
-            var ease = 1 - Math.pow(1 - progress, 3);
-            var current = targetVal * ease;
-
-            if (decimals > 0) {
-              el.textContent = prefix + current.toFixed(decimals) + suffix;
-            } else {
-              el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-            }
-
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              if (decimals > 0) {
-                el.textContent = prefix + targetVal.toFixed(decimals) + suffix;
-              } else {
-                el.textContent = prefix + targetVal.toLocaleString() + suffix;
-              }
-            }
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            startCounterAnimation(entry.target);
+            obs.unobserve(entry.target);
           }
+        });
+      }, { threshold: 0.1 });
 
-          requestAnimationFrame(step);
-          obs.unobserve(el);
+      counters.forEach(function(c) {
+        // If element is already in viewport on load, start immediately
+        var rect = c.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+          startCounterAnimation(c);
+        } else {
+          obs.observe(c);
         }
       });
-    }, { threshold: 0.15 });
-
-    counters.forEach(function (c) {
-      observer.observe(c);
-    });
+    } else {
+      counters.forEach(startCounterAnimation);
+    }
   }
 
-  initLiveCounters();
+  // Trigger counters immediately
+  setTimeout(initAllCounters, 100);
+
+  //----------- Mega Menu Smooth Hover & Click Handling -----------
+  $('.dropdown-mega').each(function() {
+    var $dropdown = $(this);
+    var $menu = $dropdown.find('.mega-menu-content');
+    var timer;
+
+    $dropdown.on('mouseenter', function() {
+      clearTimeout(timer);
+      $dropdown.addClass('show');
+      $menu.addClass('show');
+    }).on('mouseleave', function() {
+      timer = setTimeout(function() {
+        if (!$dropdown.is(':hover')) {
+          $dropdown.removeClass('show');
+          $menu.removeClass('show');
+        }
+      }, 200); // 200ms grace buffer ensures mouse moving across gap never closes menu!
+    });
+
+    // Also support touch and click
+    $dropdown.find('> .dropdown-toggle').on('click', function(e) {
+      if (window.innerWidth >= 1200) {
+        e.preventDefault();
+        $dropdown.toggleClass('show');
+        $menu.toggleClass('show');
+      }
+    });
+  });
+
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.dropdown-mega').length) {
+      $('.dropdown-mega, .mega-menu-content').removeClass('show');
+    }
+  });
+
 });

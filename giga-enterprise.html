@@ -10,7 +10,6 @@
     
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
-    <!-- Pre-load Dark Theme Script -->
     <script>
       (function() {
         var savedTheme = localStorage.getItem('giga_theme');
@@ -224,9 +223,10 @@
     </header>
     <!-- Header End -->
 
-    <!-- Hero / Breadcrumb Section -->
-    <section class="company-hero-banner">
-        <div class="container">
+    <!-- Hero / Breadcrumb Section with Watermark -->
+    <section class="company-hero-banner watermark-section">
+        <div class="watermark-bg-text">ENTERPRISE</div>
+        <div class="container position-relative" style="z-index: 1;">
             <nav class="breadcrumb-nav mb-3" aria-label="breadcrumb">
                 <a href="index.html">Home</a>
                 <span class="mx-2">&rsaquo;</span>
@@ -266,25 +266,25 @@
                 
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="100000" data-suffix=" MT">0</h3>
+                            <h3 class="stat-number live-counter" data-target="100000" data-suffix=" MT">100,000 MT</h3>
                             <p>Annual Volume Handled</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="12">0</h3>
+                            <h3 class="stat-number live-counter" data-target="12">12</h3>
                             <p>Regional Warehousing Hubs</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="64">0</h3>
+                            <h3 class="stat-number live-counter" data-target="64">64</h3>
                             <p>Districts Supply Reach</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="company-stat-card">
-                            <h3 class="stat-number live-counter" data-target="250" data-suffix="+">0</h3>
+                            <h3 class="stat-number live-counter" data-target="250" data-suffix="+">250+</h3>
                             <p>Institutional Partners</p>
                         </div>
                     </div>
@@ -292,51 +292,54 @@
         </div>
     </section>
 
-    <!-- Live Website View / Platform Showcase Section -->
-    <section class="py-5" id="website_view">
-        <div class="container">
+    <!-- Broad Live Website Showcase Section with Watermark -->
+    <section class="py-5 watermark-section" id="website_view">
+        <div class="watermark-bg-text">ENTERPRISE</div>
+        <div class="container broad-preview-container position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-4" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Digital Presence &amp; Interface</span>
                 <h2 class="display-6 fw-bold">Live Portal Showcase</h2>
-                <p class="text-secondary mx-auto max-w-650">Experience the online systems and interface powering Giga Enterprise.</p>
+                <p class="text-secondary mx-auto max-w-650">Experience the online systems and interface powering Giga Enterprise. Click anywhere on the frame to launch the full website.</p>
             </div>
 
             
-                    <div class="browser-mockup-frame" data-aos="zoom-in">
-                        <div class="browser-header-bar">
-                            <div class="browser-dots">
-                                <span class="browser-dot red"></span>
-                                <span class="browser-dot yellow"></span>
-                                <span class="browser-dot green"></span>
-                            </div>
-                            <div class="browser-address-bar">
-                                <span>🔒</span>
-                                <span>https://enterprise.gigagroup.com.bd</span>
-                            </div>
-                            <div class="browser-actions">
-                                <span class="badge bg-success">Verified Active Concern</span>
-                            </div>
-                        </div>
-                        <div class="browser-viewport">
-                            <div class="mockup-fallback-view">
-                                <img src="assets/images/GigaEnterprise.png" alt="Giga Enterprise Logo" class="img-fluid" style="max-height: 90px; object-fit: contain;">
-                                <h3 class="fw-bold mb-2">Giga Enterprise</h3>
-                                <p class="text-muted max-w-500 mb-4">Nationwide Supply Chain, Bulk Institutional Procurement & Commercial Trading</p>
-                                <div class="d-flex gap-2">
-                                    <a href="#inquiry" class="btn btn-danger fw-bold">Submit Business Inquiry &rarr;</a>
-                                    <a href="index.html#our_companies" class="btn btn-outline-secondary fw-semibold">&larr; Back to Group Directory</a>
-                                </div>
-                            </div>
+            <div class="broad-browser-mockup" data-aos="zoom-in">
+                <div class="broad-browser-bar">
+                    <div class="browser-dots">
+                        <span class="browser-dot red"></span>
+                        <span class="browser-dot yellow"></span>
+                        <span class="browser-dot green"></span>
+                    </div>
+                    <div class="browser-address-bar">
+                        <span>🔒</span>
+                        <span>https://enterprise.gigagroup.com.bd</span>
+                        <span class="badge bg-success ms-auto">🟢 Verified Concern</span>
+                    </div>
+                    <div class="browser-actions">
+                        <span class="badge bg-danger">Giga Group</span>
+                    </div>
+                </div>
+                <div class="broad-viewport">
+                    <div class="mockup-fallback-view h-100 d-flex flex-column justify-content-center align-items-center p-4">
+                        <img src="assets/images/GigaEnterprise.png" alt="Giga Enterprise Logo" class="img-fluid mb-3" style="max-height: 110px; object-fit: contain;">
+                        <h2 class="fw-bold mb-2 text-dark">Giga Enterprise</h2>
+                        <p class="text-secondary max-w-650 lead mb-4 text-center">Nationwide Supply Chain, Bulk Institutional Procurement & Commercial Trading</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="#inquiry" class="btn btn-danger btn-lg fw-bold px-4">Submit Business Inquiry &rarr;</a>
+                            <a href="index.html#our_companies" class="btn btn-outline-secondary btn-lg fw-semibold px-4">&larr; Back to Group Directory</a>
                         </div>
                     </div>
+                </div>
+            </div>
             
             
         </div>
     </section>
 
-    <!-- Detailed Solutions & Products Section -->
-    <section class="py-5 bg-light" id="solutions">
-        <div class="container">
+    <!-- Detailed Solutions & Products Section with Transition Cards & Watermark -->
+    <section class="py-5 bg-light watermark-section" id="solutions">
+        <div class="watermark-bg-text">ENTERPRISE</div>
+        <div class="container position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Products &amp; Capabilities</span>
                 <h2 class="display-6 fw-bold">Enterprise Solutions &amp; Offerings</h2>
@@ -389,7 +392,7 @@
                 </div>
             </div>
 
-            <!-- Tech Stack & Methodologies -->
+            <!-- Tech Stack & Standards -->
             <div class="p-4 bg-white border rounded-4 shadow-sm mt-5 text-center" data-aos="fade-up">
                 <h5 class="fw-bold mb-3">Core Technologies &amp; Industry Standards</h5>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -399,7 +402,7 @@
         </div>
     </section>
 
-    <!-- Inter-Company Navigation: Seamlessly Switch Between Sister Concerns (NO \n BUG) -->
+    <!-- Inter-Company Navigation (Zero \n Bug) -->
     <section class="container py-4">
         <div class="inter-company-nav-wrapper text-center" data-aos="fade-up">
             <h5 class="fw-bold mb-1">Explore Other Giga Group Sister Concerns</h5>
@@ -470,7 +473,6 @@
         </div>
     </section>
 
-    <!-- Clean Corporate Footer -->
     
     <footer class="flex_container footer pt-5 pb-3">
         <div class="container">
@@ -485,7 +487,6 @@
                             Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
                         </p>
                         
-                        <!-- Social Icons -->
                         <div class="social_icons d-flex gap-2">
                             <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Facebook">
                                 <img src="assets/images/facebook.png" alt="Facebook" width="20">
@@ -500,7 +501,7 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Center - Sister Concerns Directory (All 10 Companies Workable) -->
+                <!-- Col 2: Center - Sister Concerns Directory -->
                 <div class="col-lg-5 col-md-7">
                     <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
                     <div class="row g-2">
@@ -545,7 +546,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom Copyright Bar -->
             <div class="footer-bottom-bar border-top pt-3 mt-4">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">

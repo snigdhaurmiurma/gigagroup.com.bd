@@ -12,7 +12,6 @@
     
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
-    <!-- Pre-load Dark Theme script to prevent flash -->
     <script>
       (function() {
         var savedTheme = localStorage.getItem('giga_theme');
@@ -27,7 +26,6 @@
       })();
     </script>
     
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/aos.css">
@@ -252,7 +250,7 @@
                     <div class="hero_section">
                         <div class="content" data-aos="fade-up">
                             
-                            <!-- Highlighted visible first line badge -->
+                            <!-- 100% visible first line badge -->
                             <div class="hero-subheading-badge">
                                 <span>🇧🇩</span> INDUSTRIAL &amp; DIGITAL CONGLOMERATE OF BANGLADESH
                             </div>
@@ -268,29 +266,29 @@
                                 <a href="giga-digital-agency.html" role="button" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Giga Digital Agency &rarr;</a>
                             </div>
                             
-                            <!-- Live Animated Corporate Stats Counter -->
+                            <!-- Live Animated Corporate Stats Counter (Never stuck at 0) -->
                             <div class="row hero-stats-counter mt-5 pt-3 g-3">
                                 <div class="col-6 col-md-3">
                                     <div class="stat-box-enhanced">
-                                        <h3 class="stat-number live-counter" data-target="10" data-suffix="+">0</h3>
+                                        <h3 class="stat-number live-counter" data-target="10" data-suffix="+">10+</h3>
                                         <p class="stat-label">Operating Companies</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <div class="stat-box-enhanced">
-                                        <h3 class="stat-number live-counter" data-target="64" data-suffix="">0</h3>
+                                        <h3 class="stat-number live-counter" data-target="64" data-suffix="">64</h3>
                                         <p class="stat-label">Districts Served</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <div class="stat-box-enhanced">
-                                        <h3 class="stat-number live-counter" data-target="500" data-suffix="+">0</h3>
+                                        <h3 class="stat-number live-counter" data-target="500" data-suffix="+">500+</h3>
                                         <p class="stat-label">Enterprise Workforce</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <div class="stat-box-enhanced">
-                                        <h3 class="stat-number live-counter" data-target="100" data-suffix="%">0</h3>
+                                        <h3 class="stat-number live-counter" data-target="100" data-suffix="%">100%</h3>
                                         <p class="stat-label">Bangladeshi Equity</p>
                                     </div>
                                 </div>
@@ -304,14 +302,15 @@
         <!-- Hero Header End -->
     </div>
 
-    <!-- Corporate Overview (About Us) - Reorganized to utilize all right-side space -->
-    <section class="flex_container about_us page-section py-5" id="about_us">
-        <div class="container py-4">
+    <!-- Corporate Overview (About Us) with Watermark & Complete 1280px Width -->
+    <section class="flex_container about_us page-section py-5 watermark-section" id="about_us">
+        <div class="watermark-bg-text">GIGA GROUP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
             <div class="row align-items-center g-5">
-                <!-- Left Visual Column -->
+                <!-- Left Column: Modern Architecture Visual (NO girl image) -->
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="about-visual-wrapper position-relative text-center">
-                        <img src="assets/images/projects/about-img.png" alt="Giga Group Architecture" class="img-fluid rounded-4 shadow-lg w-100">
+                        <img src="assets/images/projects/project-5.jpg" alt="Giga Group Corporate Complex" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;">
                         <div class="about-experience-badge p-3 rounded-3 shadow">
                             <h4 class="mb-0 fw-bold text-danger">Since 2020</h4>
                             <small class="text-muted">Headquartered in Kawran Bazar, Dhaka</small>
@@ -319,16 +318,16 @@
                     </div>
                 </div>
                 
-                <!-- Right Content Column (Rich, Organized, Filling All Spaces) -->
+                <!-- Right Column: Rich, Organized, Filling All Spaces -->
                 <div class="col-lg-7" data-aos="fade-left">
-                    <div class="content">
+                    <div class="content w-100">
                         <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Corporate Overview</span>
                         <h2 class="display-6 fw-bold mb-3">One of Bangladesh's Most Progressive Conglomerates</h2>
                         <p class="lead text-secondary mb-4">
                             Giga Group of Bangladesh is a multifaceted business federation committed to technological empowerment, indigenous manufacturing, and sustainable market distribution across all 64 districts.
                         </p>
                         
-                        <!-- 3-Column Pillar Cards (Utilizing Horizontal Width) -->
+                        <!-- 3-Column Pillar Cards (Utilizing Full Horizontal Width) -->
                         <div class="row g-3 mb-4">
                             <div class="col-md-4">
                                 <div class="about-feature-card">
@@ -381,7 +380,7 @@
                             </div>
                         </div>
 
-                        <!-- Workable Interactive Action Buttons -->
+                        <!-- Action Buttons -->
                         <div class="btn_holder d-flex flex-wrap gap-3 mt-4">
                             <a href="#chairman_desk" class="btn btn-danger btn-lg px-4 py-2 fw-bold">Executive Leadership &rarr;</a>
                             <a href="#contact_us" class="btn btn-outline-danger btn-lg px-4 py-2 fw-semibold">Get in Touch &darr;</a>
@@ -393,9 +392,10 @@
     </section>
     <!-- About Us End -->
 
-    <!-- Operating Entities Section -->
-    <section class="flex_container services page-section py-5 bg-light" id="our_companies">
-        <div class="container py-4">
+    <!-- Operating Entities Section with Watermark -->
+    <section class="flex_container services page-section py-5 bg-light watermark-section" id="our_companies">
+        <div class="watermark-bg-text">GIGA GROUP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Operating Entities</span>
                 <h2 class="display-6 fw-bold">Our Companies &amp; Sister Concerns</h2>
@@ -670,8 +670,9 @@
     <!-- Operating Entities End -->
 
     <!-- Chairman's Desk Section -->
-    <section class="flex_container chairman_desk page-section py-5" id="chairman_desk">
-        <div class="container py-4">
+    <section class="flex_container chairman_desk page-section py-5 watermark-section" id="chairman_desk">
+        <div class="watermark-bg-text">LEADERSHIP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5 text-center" data-aos="fade-right">
                     <div class="chairman-portrait-wrapper p-3 rounded-4 shadow bg-white border">
@@ -721,8 +722,9 @@
     <!-- Chairman's Desk End -->
 
     <!-- Case Studies / Projects Section -->
-    <section class="flex_container case_studies page-section py-5 bg-light" id="case_studies">
-        <div class="container py-4">
+    <section class="flex_container case_studies page-section py-5 bg-light watermark-section" id="case_studies">
+        <div class="watermark-bg-text">IMPACT</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Demonstrated Impact</span>
                 <h2 class="display-6 fw-bold">Enterprise Projects &amp; Milestones</h2>
@@ -939,7 +941,6 @@
     </section>
     <!-- Contact Section End -->
 
-    <!-- Clean Corporate Footer -->
     
     <footer class="flex_container footer pt-5 pb-3">
         <div class="container">
@@ -954,7 +955,6 @@
                             Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
                         </p>
                         
-                        <!-- Social Icons -->
                         <div class="social_icons d-flex gap-2">
                             <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Facebook">
                                 <img src="assets/images/facebook.png" alt="Facebook" width="20">
@@ -969,7 +969,7 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Center - Sister Concerns Directory (All 10 Companies Workable) -->
+                <!-- Col 2: Center - Sister Concerns Directory -->
                 <div class="col-lg-5 col-md-7">
                     <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
                     <div class="row g-2">
@@ -1014,7 +1014,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom Copyright Bar -->
             <div class="footer-bottom-bar border-top pt-3 mt-4">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
@@ -1032,12 +1031,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
-    <script src="assets/js/smoothScroll.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/swiper.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

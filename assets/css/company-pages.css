@@ -507,3 +507,100 @@ footer.footer a.text-danger:hover {
     font-size: 0.8rem;
   }
 }
+
+
+/* ==========================================================================
+   WATERMARK BACKGROUND STYLES
+   ========================================================================== */
+.watermark-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-size: clamp(4.5rem, 14vw, 12rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(15, 23, 42, 0.035);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+[data-theme="dark"] .watermark-bg-text {
+  color: rgba(255, 255, 255, 0.035);
+}
+
+/* ==========================================================================
+   BROAD PREVIEW WINDOW STYLES (Broad, Interactive & Clickable)
+   ========================================================================== */
+.broad-preview-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.broad-browser-mockup {
+  background: var(--card-bg);
+  border: 1px solid var(--mockup-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.broad-browser-mockup:hover {
+  transform: translateY(-6px);
+  border-color: #ef4444;
+  box-shadow: 0 35px 80px rgba(239, 68, 68, 0.2);
+}
+
+.broad-browser-bar {
+  background: var(--mockup-bar);
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--mockup-border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.broad-viewport {
+  width: 100%;
+  height: 620px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.broad-viewport iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: auto;
+}
+
+.broad-click-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Seamless Dropdown Bridge to prevent hover loss */
+.navbar .mega-menu-content::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: transparent;
+}
