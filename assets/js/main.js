@@ -239,13 +239,67 @@ $(document).ready(function () {
 
   // Smooth scroll for in-page anchors
   $('a[href^="#"]').on('click', function (e) {
-    var target = $(this.getAttribute('href'));
+    var href = this.getAttribute('href');
+    if (href === '#' || !href) return;
+    var target = $(href);
     if (target.length) {
       e.preventDefault();
       $('html, body').stop().animate({
-        scrollTop: target.offset().top - 90
+        scrollTop: target.offset().top - 85
       }, 700);
       $('.navbar-collapse').collapse('hide');
     }
   });
+
+  //----------- Live Animated Number Counters -----------
+  function initLiveCounters() {
+    var counters = document.querySelectorAll('.live-counter');
+    if (!counters.length) return;
+
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var targetVal = parseFloat(el.getAttribute('data-target')) || 0;
+          var suffix = el.getAttribute('data-suffix') || '';
+          var prefix = el.getAttribute('data-prefix') || '';
+          var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          var duration = 1800;
+          var start = performance.now();
+
+          function step(now) {
+            var progress = Math.min((now - start) / duration, 1);
+            // Ease out cubic
+            var ease = 1 - Math.pow(1 - progress, 3);
+            var current = targetVal * ease;
+
+            if (decimals > 0) {
+              el.textContent = prefix + current.toFixed(decimals) + suffix;
+            } else {
+              el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              if (decimals > 0) {
+                el.textContent = prefix + targetVal.toFixed(decimals) + suffix;
+              } else {
+                el.textContent = prefix + targetVal.toLocaleString() + suffix;
+              }
+            }
+          }
+
+          requestAnimationFrame(step);
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    counters.forEach(function (c) {
+      observer.observe(c);
+    });
+  }
+
+  initLiveCounters();
 });

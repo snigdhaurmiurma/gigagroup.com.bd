@@ -1,18 +1,6 @@
 <!DOCTYPE html>
-<!--
-Template Name : SoftTech - Landing Page HTML Template (Enhanced for Giga Group)
-Version       : 3.0.0 (Multi-Page Corporate Architecture)
-Author        : Giga Group Engineering
--->
-
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
 <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +8,8 @@ Author        : Giga Group Engineering
     <meta name="description" content="Giga Group is one of Bangladesh's most dynamic conglomerates with 10 operating concerns spanning enterprise software, digital agency, agritech, food, logistics, and social foundation.">
     <meta name="author" content="Giga Group">
     
-    <!-- Site Title -->
     <title>Giga Group of Bangladesh | Official Corporate Portal</title>
     
-    <!-- Favicon -->
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
     <!-- Pre-load Dark Theme script to prevent flash -->
@@ -53,10 +39,9 @@ Author        : Giga Group Engineering
 
 <body>
     <div class="main-wrapper">
-        <!-- header start here -->
+        <!-- Header Start -->
         <header class="flex_container header_container bg-white shadow-sm sticky-top">
             <div class="container padding_0">
-                <!-- nav_bar start here -->
                 <nav class="navbar navbar-expand-xl navbar-light bg-light py-2">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#home">
@@ -82,32 +67,140 @@ Author        : Giga Group Engineering
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about_us">About Us</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#our_companies" id="companiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Our Companies
-                                    </a>
-                                    <ul class="dropdown-menu shadow-lg border-0" aria-labelledby="companiesDropdown">
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Technology &amp; Software</h6></li>
-                                        <li><a class="dropdown-item d-flex justify-content-between align-items-center fw-semibold text-danger" href="giga-soft.html">Giga Soft Limited <span>&rarr;</span></a></li>
-                                        <li><a class="dropdown-item" href="pc-care.html">PC Care &amp; Engineering &rarr;</a></li>
-                                        <li><a class="dropdown-item" href="tender-barta.html">Tender Barta &rarr;</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Creative &amp; Media</h6></li>
-                                        <li><a class="dropdown-item d-flex justify-content-between align-items-center fw-semibold text-danger" href="giga-digital-agency.html">Giga Digital Agency <span>&rarr;</span></a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Food &amp; Agriculture</h6></li>
-                                        <li><a class="dropdown-item" href="giga-food.html">Giga Food Limited &rarr;</a></li>
-                                        <li><a class="dropdown-item" href="krishi-beez-bank.html">Krishi Beez Bank &rarr;</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Logistics &amp; Commerce</h6></li>
-                                        <li><a class="dropdown-item" href="giga-enterprise.html">Giga Enterprise &rarr;</a></li>
-                                        <li><a class="dropdown-item" href="rider-service.html">Rider Service Limited &rarr;</a></li>
-                                        <li><a class="dropdown-item" href="giga-shop.html">Giga Shop Limited &rarr;</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">CSR &amp; Impact</h6></li>
-                                        <li><a class="dropdown-item" href="giga-foundation.html">Giga Foundation &rarr;</a></li>
-                                    </ul>
-                                </li>
+                                
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle ${currentActiveId ? 'active' : ''}" href="index.html#our_companies" id="companiesMegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Companies
+                                </a>
+                                <div class="dropdown-menu mega-menu-content shadow-2xl border-0 p-4" aria-labelledby="companiesMegaDropdown">
+                                    <div class="container-fluid">
+                                        <div class="row g-4">
+                                            <!-- Col 1: Left - Technology & Creative -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-danger-subtle text-danger px-2 py-1 small fw-bold">TECHNOLOGY &amp; CREATIVE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-soft.html" class="mega-link-item">
+                                                            <span class="mega-icon">💻</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Soft Limited <span class="badge bg-danger text-white ms-1">Live Site ↗</span></div>
+                                                                <small class="mega-link-desc">Cloud ERP, AI, FinTech &amp; Mobile Architecture</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-digital-agency.html" class="mega-link-item">
+                                                            <span class="mega-icon">🎨</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Digital Agency <span class="badge bg-primary text-white ms-1">Live Site ↗</span></div>
+                                                                <small class="mega-link-desc">Brand Architecture, Growth Marketing &amp; UI/UX</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pc-care.html" class="mega-link-item">
+                                                            <span class="mega-icon">🖥️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">PC Care &amp; Engineering</div>
+                                                                <small class="mega-link-desc">Enterprise Servers, AMC &amp; Hardware Support</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tender-barta.html" class="mega-link-item">
+                                                            <span class="mega-icon">📊</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Tender Barta</div>
+                                                                <small class="mega-link-desc">e-GP Procurement Intel &amp; Real-time Alerts</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Col 2: Center - Food, Agri & CSR -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-success-subtle text-success px-2 py-1 small fw-bold">FOOD, AGRI &amp; CSR</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-food.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌾</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Food Limited</div>
+                                                                <small class="mega-link-desc">100% Pure Organic Processing &amp; Edible Oils</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="krishi-beez-bank.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌱</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Krishi Beez Bank</div>
+                                                                <small class="mega-link-desc">Certified High-Yield Agro-Seeds &amp; Cold Storage</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-foundation.html" class="mega-link-item">
+                                                            <span class="mega-icon">🤝</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Foundation</div>
+                                                                <small class="mega-link-desc">Youth Scholarships, Disaster Relief &amp; CSR</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Col 3: Right - Logistics & Commerce -->
+                                            <div class="col-lg-4 col-md-12 mega-col">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-warning-subtle text-dark px-2 py-1 small fw-bold">LOGISTICS &amp; COMMERCE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-enterprise.html" class="mega-link-item">
+                                                            <span class="mega-icon">🏗️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Enterprise</div>
+                                                                <small class="mega-link-desc">Commodity Trading &amp; Nationwide Bulk Supply</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="rider-service.html" class="mega-link-item">
+                                                            <span class="mega-icon">🏍️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Rider Service Limited</div>
+                                                                <small class="mega-link-desc">GPS Fleet Parcel Delivery &amp; Express Cargo</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-shop.html" class="mega-link-item">
+                                                            <span class="mega-icon">🛍️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Shop Limited</div>
+                                                                <small class="mega-link-desc">Omnichannel E-Commerce &amp; Tech Gadgets</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="mega-cta-box p-3 rounded-3 mt-3">
+                                                    <div class="fw-bold text-danger small mb-1">Corporate Directory</div>
+                                                    <p class="text-muted small mb-2">View complete operating structure.</p>
+                                                    <a href="index.html#our_companies" class="btn btn-danger btn-sm w-100 fw-bold">View All 10 Concerns &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#chairman_desk">Chairman's Desk</a>
                                 </li>
@@ -144,12 +237,11 @@ Author        : Giga Group Engineering
                         </div>
                     </div>
                 </nav>
-                <!-- nav_bar end here -->
             </div>
         </header>
-        <!-- header end here -->
+        <!-- Header End -->
 
-        <!-- hero_header start here -->
+        <!-- Hero Header -->
         <section class="hero_header page-section" id="home">
             <div class="bg_image_holder">
                 <img src="assets/images/hero_bg.png" alt="Giga Group Hero Background">
@@ -158,109 +250,151 @@ Author        : Giga Group Engineering
             <div class="flex_container">
                 <div class="container">
                     <div class="hero_section">
-                        <!-- content start here-->
                         <div class="content" data-aos="fade-up">
-                            <span class="hero-subheading text-uppercase fw-bold letter-spacing-2">Industrial &amp; Digital Conglomerate of Bangladesh</span>
-                            <h1>Building Tomorrow's Bangladesh, Today</h1>
-                            <p class="hero-lead-text">
+                            
+                            <!-- Highlighted visible first line badge -->
+                            <div class="hero-subheading-badge">
+                                <span>🇧🇩</span> INDUSTRIAL &amp; DIGITAL CONGLOMERATE OF BANGLADESH
+                            </div>
+                            
+                            <h1 class="text-white fw-bold mb-3">Building Tomorrow's Bangladesh, Today</h1>
+                            <p class="hero-lead-text text-white-50">
                                 Headquartered in Dhaka, Giga Group orchestrates 10 specialized operating companies across enterprise software, creative media, nationwide logistics, agricultural sovereignty, and community stewardship.
                             </p>
+                            
                             <div class="btn_holder mt-4 d-flex flex-wrap gap-3">
                                 <a href="#our_companies" role="button" class="btn btn-danger btn-lg px-4 py-2 text-white fw-bold">Explore Our Companies</a>
                                 <a href="giga-soft.html" role="button" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Giga Soft &rarr;</a>
                                 <a href="giga-digital-agency.html" role="button" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Giga Digital Agency &rarr;</a>
                             </div>
                             
-                            <!-- Corporate Stats Counter -->
+                            <!-- Live Animated Corporate Stats Counter -->
                             <div class="row hero-stats-counter mt-5 pt-3 g-3">
                                 <div class="col-6 col-md-3">
-                                    <div class="stat-box">
-                                        <h3 class="stat-number fw-bold text-danger mb-0">10</h3>
-                                        <p class="stat-label text-muted small mb-0">Operating Companies</p>
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="10" data-suffix="+">0</h3>
+                                        <p class="stat-label">Operating Companies</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="stat-box">
-                                        <h3 class="stat-number fw-bold text-danger mb-0">64</h3>
-                                        <p class="stat-label text-muted small mb-0">Districts Served</p>
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="64" data-suffix="">0</h3>
+                                        <p class="stat-label">Districts Served</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="stat-box">
-                                        <h3 class="stat-number fw-bold text-danger mb-0">500+</h3>
-                                        <p class="stat-label text-muted small mb-0">Enterprise Workforce</p>
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="500" data-suffix="+">0</h3>
+                                        <p class="stat-label">Enterprise Workforce</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="stat-box">
-                                        <h3 class="stat-number fw-bold text-danger mb-0">100%</h3>
-                                        <p class="stat-label text-muted small mb-0">Bangladeshi Equity</p>
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="100" data-suffix="%">0</h3>
+                                        <p class="stat-label">Bangladeshi Equity</p>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <!-- content end here-->
                     </div>
                 </div>
             </div>
         </section>
-        <!-- hero_header end here -->
+        <!-- Hero Header End -->
     </div>
 
-    <!-- about us start here -->
+    <!-- Corporate Overview (About Us) - Reorganized to utilize all right-side space -->
     <section class="flex_container about_us page-section py-5" id="about_us">
         <div class="container py-4">
             <div class="row align-items-center g-5">
+                <!-- Left Visual Column -->
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="about-visual-wrapper position-relative text-center">
-                        <img src="assets/images/projects/about-img.png" alt="Giga Group Architecture" class="img-fluid rounded-4 shadow-lg">
+                        <img src="assets/images/projects/about-img.png" alt="Giga Group Architecture" class="img-fluid rounded-4 shadow-lg w-100">
                         <div class="about-experience-badge p-3 rounded-3 shadow">
                             <h4 class="mb-0 fw-bold text-danger">Since 2020</h4>
-                            <small class="text-muted">Dhaka, Bangladesh</small>
+                            <small class="text-muted">Headquartered in Kawran Bazar, Dhaka</small>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Right Content Column (Rich, Organized, Filling All Spaces) -->
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="content">
                         <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Corporate Overview</span>
                         <h2 class="display-6 fw-bold mb-3">One of Bangladesh's Most Progressive Conglomerates</h2>
-                        <p class="lead text-secondary">
-                            Giga Group of Bangladesh is a multifaceted business federation committed to technological empowerment, indigenous manufacturing, and sustainable market distribution.
-                        </p>
-                        <p class="text-secondary">
-                            From our central headquarters at Kawran Bazar, Dhaka, Giga Group coordinates strategic ventures in cutting-edge enterprise software, full-scale digital advertising, agricultural seed banking, food packaging, tech maintenance, and logistics.
+                        <p class="lead text-secondary mb-4">
+                            Giga Group of Bangladesh is a multifaceted business federation committed to technological empowerment, indigenous manufacturing, and sustainable market distribution across all 64 districts.
                         </p>
                         
-                        <div class="row g-4 mt-2">
-                            <div class="col-md-6">
-                                <div class="about-pillar-box p-3 rounded-3 border">
-                                    <h5 class="fw-bold text-danger mb-2">Our Mission</h5>
-                                    <p class="small text-secondary mb-0">To deliver premier technological and industrial products that elevate quality of life, streamline commerce, and contribute directly to Bangladesh's macroeconomic self-reliance.</p>
+                        <!-- 3-Column Pillar Cards (Utilizing Horizontal Width) -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">🎯</div>
+                                    <h5>Our Mission</h5>
+                                    <p>To engineer premier technological and industrial products that elevate quality of life and macroeconomic self-reliance.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="about-pillar-box p-3 rounded-3 border">
-                                    <h5 class="fw-bold text-danger mb-2">Our Vision</h5>
-                                    <p class="small text-secondary mb-0">To stand as the most trusted national conglomerate across software, commerce, and agriculture through unwavering integrity, technological wisdom, and customer-first execution.</p>
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">🔭</div>
+                                    <h5>Our Vision</h5>
+                                    <p>To lead the national frontier across software, commerce, and agriculture through technological wisdom and ethical execution.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">⚖️</div>
+                                    <h5>Governance</h5>
+                                    <p>Uncompromising zero-tolerance compliance, 100% domestic institutional equity, and transparent corporate governance.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="btn_holder mt-4">
-                            <a href="#chairman_desk" class="btn btn-danger px-4 py-2 fw-semibold">Executive Leadership &rarr;</a>
-                            <a href="#contact_us" class="btn btn-outline-secondary px-4 py-2 fw-semibold ms-2">Get in Touch</a>
+                        <!-- 4-Item Feature Strip -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>100% Domestic Capital &amp; Bangladeshi Equity</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Food Security &amp; Seed Sovereignty Assurance</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Mission-Critical Cloud Software Ecosystems</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Nationwide Last-Mile Logistics Infrastructure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Workable Interactive Action Buttons -->
+                        <div class="btn_holder d-flex flex-wrap gap-3 mt-4">
+                            <a href="#chairman_desk" class="btn btn-danger btn-lg px-4 py-2 fw-bold">Executive Leadership &rarr;</a>
+                            <a href="#contact_us" class="btn btn-outline-danger btn-lg px-4 py-2 fw-semibold">Get in Touch &darr;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- about us end here -->
+    <!-- About Us End -->
 
-    <!-- companies start here -->
-    <section class="flex_container services page-section py-5" id="our_companies">
+    <!-- Operating Entities Section -->
+    <section class="flex_container services page-section py-5 bg-light" id="our_companies">
         <div class="container py-4">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Operating Entities</span>
@@ -282,7 +416,7 @@ Author        : Giga Group Engineering
 
                 <!-- 1. Giga Soft Limited -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-soft.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/gigasoft.png" alt="Giga Soft Limited" class="img-fluid">
@@ -311,7 +445,7 @@ Author        : Giga Group Engineering
 
                 <!-- 2. Giga Digital Agency -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="creative" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-digital-agency.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/logo.png" alt="Giga Digital Agency" class="img-fluid">
@@ -340,7 +474,7 @@ Author        : Giga Group Engineering
 
                 <!-- 3. PC Care & Engineering Limited -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="pc-care.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/pccare.png" alt="PC Care & Engineering" class="img-fluid">
@@ -364,7 +498,7 @@ Author        : Giga Group Engineering
 
                 <!-- 4. Giga Food Limited -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="agri" data-aos="fade-up">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-food.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/gigafood.png" alt="Giga Food Limited" class="img-fluid">
@@ -388,7 +522,7 @@ Author        : Giga Group Engineering
 
                 <!-- 5. Krishi Beez Bank -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="agri" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="krishi-beez-bank.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/kbblogo.jpg" alt="Krishi Beez Bank" class="img-fluid">
@@ -412,7 +546,7 @@ Author        : Giga Group Engineering
 
                 <!-- 6. Giga Enterprise -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-enterprise.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/GigaEnterprise.png" alt="Giga Enterprise" class="img-fluid">
@@ -436,7 +570,7 @@ Author        : Giga Group Engineering
 
                 <!-- 7. Rider Service Limited -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="rider-service.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/rider.png" alt="Rider Service Limited" class="img-fluid">
@@ -460,7 +594,7 @@ Author        : Giga Group Engineering
 
                 <!-- 8. Tender Barta -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="tender-barta.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/tender.png" alt="Tender Barta" class="img-fluid">
@@ -484,7 +618,7 @@ Author        : Giga Group Engineering
 
                 <!-- 9. Giga Shop Limited -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-shop.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/gigashop.png" alt="Giga Shop" class="img-fluid">
@@ -508,7 +642,7 @@ Author        : Giga Group Engineering
 
                 <!-- 10. Giga Foundation -->
                 <div class="col-lg-4 col-md-6 company-item" data-category="foundation" data-aos="fade-up">
-                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="giga-foundation.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
                                 <img src="assets/images/gigafoundation.png" alt="Giga Foundation" class="img-fluid">
@@ -533,10 +667,10 @@ Author        : Giga Group Engineering
             </div>
         </div>
     </section>
-    <!-- companies end here -->
+    <!-- Operating Entities End -->
 
     <!-- Chairman's Desk Section -->
-    <section class="flex_container chairman_desk page-section py-5 bg-light" id="chairman_desk">
+    <section class="flex_container chairman_desk page-section py-5" id="chairman_desk">
         <div class="container py-4">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5 text-center" data-aos="fade-right">
@@ -584,10 +718,10 @@ Author        : Giga Group Engineering
             </div>
         </div>
     </section>
-    <!-- Chairman's Desk end here -->
+    <!-- Chairman's Desk End -->
 
     <!-- Case Studies / Projects Section -->
-    <section class="flex_container case_studies page-section py-5" id="case_studies">
+    <section class="flex_container case_studies page-section py-5 bg-light" id="case_studies">
         <div class="container py-4">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Demonstrated Impact</span>
@@ -651,10 +785,10 @@ Author        : Giga Group Engineering
             </div>
         </div>
     </section>
-    <!-- Case Studies end here -->
+    <!-- Case Studies End -->
 
-    <!-- Blogs & News start here -->
-    <section class="flex_container blogs page-section py-5 bg-light" id="blogs">
+    <!-- Blogs & News -->
+    <section class="flex_container blogs page-section py-5" id="blogs">
         <div class="container py-4">
             <div class="content_header text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Media &amp; Press</span>
@@ -662,7 +796,6 @@ Author        : Giga Group Engineering
                 <p class="text-secondary">Stay updated with the latest technological developments, partnerships, and achievements from Giga Group.</p>
             </div>
             
-            <!-- blog_list start here -->
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <div class="blog-card-enhanced h-100 bg-white border rounded-4 overflow-hidden shadow-sm d-flex flex-column">
@@ -717,10 +850,10 @@ Author        : Giga Group Engineering
             </div>
         </div>
     </section>
-    <!-- Blogs end here -->
+    <!-- Blogs End -->
 
     <!-- Contact Section -->
-    <section class="flex_container page-section py-5" id="contact_us">
+    <section class="flex_container page-section py-5 bg-light" id="contact_us">
         <div class="container py-4">
             <div class="row g-5">
                 <div class="col-lg-5" data-aos="fade-right">
@@ -731,24 +864,24 @@ Author        : Giga Group Engineering
                     </p>
 
                     <div class="d-flex flex-column gap-3">
-                        <div class="contact-info-card p-3 rounded-3 border bg-white shadow-sm d-flex align-items-center">
-                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-4">📍</div>
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">📍</div>
                             <div>
                                 <h6 class="fw-bold mb-1">Corporate Headquarters</h6>
                                 <p class="text-muted small mb-0">46, Kazi Nazrul Islam Avenue, Kawran Bazar, Dhaka-1215, Bangladesh</p>
                             </div>
                         </div>
 
-                        <div class="contact-info-card p-3 rounded-3 border bg-white shadow-sm d-flex align-items-center">
-                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-4">📞</div>
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">📞</div>
                             <div>
                                 <h6 class="fw-bold mb-1">Telephone Hotline</h6>
                                 <p class="text-muted small mb-0"><a href="tel:+8801778741894" class="text-decoration-none text-muted">+88-01778-741894</a></p>
                             </div>
                         </div>
 
-                        <div class="contact-info-card p-3 rounded-3 border bg-white shadow-sm d-flex align-items-center">
-                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-4">✉️</div>
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">✉️</div>
                             <div>
                                 <h6 class="fw-bold mb-1">Official Email Desk</h6>
                                 <p class="text-muted small mb-0"><a href="mailto:gigagroupbd@gmail.com" class="text-decoration-none text-muted">gigagroupbd@gmail.com</a></p>
@@ -764,11 +897,11 @@ Author        : Giga Group Engineering
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label small fw-semibold">Your Full Name *</label>
-                                    <input type="text" class="form-control" required placeholder="e.g. Tariq Ahmed">
+                                    <input type="text" class="form-control" required placeholder="Tariq Ahmed">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label small fw-semibold">Corporate Email Address *</label>
-                                    <input type="email" class="form-control" required placeholder="name@institution.com">
+                                    <input type="email" class="form-control" required placeholder="tariq@institution.com">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label small fw-semibold">Organization / Company</label>
@@ -804,39 +937,25 @@ Author        : Giga Group Engineering
             </div>
         </div>
     </section>
-    <!-- Contact Section end here -->
+    <!-- Contact Section End -->
 
-    <!-- cta start here -->
-    <section class="flex_container cta py-5" id="cta">
-        <div class="container">
-            <div class="cta_content relative text-center py-4">
-                <h3 class='text-center text-white mb-3'>Subscribe to Giga Group <span class="text_black fw-bold">Executive Briefings</span></h3>
-                <p class="text-white-50 max-w-650 mx-auto mb-4">Receive quarterly economic reviews, tech insights, and corporate updates directly in your inbox.</p>
-                <form class='relative d-flex justify-content-center max-w-500 mx-auto' onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-                    <input class='input_field form-control me-2 py-2 px-3' type="email" name="email" placeholder="Enter your business email" required />
-                    <button type="submit" class='btn btn-danger px-4 fw-bold'>
-                        Subscribe
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <!-- cta end here -->
-
-    <!-- footer start here -->
+    <!-- Clean Corporate Footer -->
+    
     <footer class="flex_container footer pt-5 pb-3">
         <div class="container">
             <div class="row g-4 pb-4">
                 <!-- Col 1: Left - Brand & About -->
                 <div class="col-lg-4 col-md-12">
                     <div class="footer-brand-box">
-                        <img src='assets/images/logo/logo.png' alt="Giga Group" class="footer-logo mb-3">
-                        <p class="sub_title text-muted small pe-lg-4">
-                            Giga Group is one of Bangladesh's most diversified conglomerates operating across enterprise software, creative marketing, agricultural sovereignty, food manufacturing, and institutional logistics.
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <img src='assets/images/logo/logo.png' alt="Giga Group" class="footer-logo">
+                        </a>
+                        <p class="sub_title text-muted small pe-lg-4 mb-4">
+                            Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
                         </p>
                         
                         <!-- Social Icons -->
-                        <div class="social_icons d-flex gap-2 mt-3">
+                        <div class="social_icons d-flex gap-2">
                             <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Facebook">
                                 <img src="assets/images/facebook.png" alt="Facebook" width="20">
                             </a>
@@ -850,26 +969,26 @@ Author        : Giga Group Engineering
                     </div>
                 </div>
 
-                <!-- Col 2: Center - Sister Concerns Dedicated Pages -->
+                <!-- Col 2: Center - Sister Concerns Directory (All 10 Companies Workable) -->
                 <div class="col-lg-5 col-md-7">
-                    <h5 class="footer_header fw-bold text-danger mb-3">Our Operating Companies</h5>
+                    <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
                     <div class="row g-2">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links-list small">
-                                <li><a href="giga-soft.html" class="text-danger fw-bold">Giga Soft Limited ↗</a></li>
-                                <li><a href="giga-digital-agency.html" class="text-danger fw-bold">Giga Digital Agency ↗</a></li>
-                                <li><a href="pc-care.html">PC Care &amp; Engineering</a></li>
-                                <li><a href="giga-food.html">Giga Food Limited</a></li>
-                                <li><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
+                                <li class="mb-2"><a href="giga-soft.html" class="text-danger fw-bold">Giga Soft Limited ↗</a></li>
+                                <li class="mb-2"><a href="giga-digital-agency.html" class="text-danger fw-bold">Giga Digital Agency ↗</a></li>
+                                <li class="mb-2"><a href="pc-care.html">PC Care &amp; Engineering</a></li>
+                                <li class="mb-2"><a href="giga-food.html">Giga Food Limited</a></li>
+                                <li class="mb-2"><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled footer-links-list small">
-                                <li><a href="giga-enterprise.html">Giga Enterprise</a></li>
-                                <li><a href="rider-service.html">Rider Service Limited</a></li>
-                                <li><a href="tender-barta.html">Tender Barta</a></li>
-                                <li><a href="giga-shop.html">Giga Shop Limited</a></li>
-                                <li><a href="giga-foundation.html">Giga Foundation</a></li>
+                                <li class="mb-2"><a href="giga-enterprise.html">Giga Enterprise</a></li>
+                                <li class="mb-2"><a href="rider-service.html">Rider Service Limited</a></li>
+                                <li class="mb-2"><a href="tender-barta.html">Tender Barta</a></li>
+                                <li class="mb-2"><a href="giga-shop.html">Giga Shop Limited</a></li>
+                                <li class="mb-2"><a href="giga-foundation.html">Giga Foundation</a></li>
                             </ul>
                         </div>
                     </div>
@@ -879,39 +998,41 @@ Author        : Giga Group Engineering
                 <div class="col-lg-3 col-md-5">
                     <h5 class="footer_header fw-bold text-danger mb-3">Corporate Headquarters</h5>
                     <ul class="list-unstyled footer-contact-list small text-muted">
-                        <li class="mb-2">
-                            <strong class="text-dark">Address:</strong><br>
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Central Address:</strong>
                             46, Kazi Nazrul Islam Avenue, Kawran Bazar, Dhaka-1215, Bangladesh.
                         </li>
-                        <li class="mb-2">
-                            <strong class="text-dark">Telephone:</strong><br>
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Telephone Hotlines:</strong>
                             <a href="tel:+8801778741894" class="text-decoration-none text-muted">+88-01778-741894</a>
                         </li>
-                        <li class="mb-2">
-                            <strong class="text-dark">Official Email:</strong><br>
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Official Email Desk:</strong>
                             <a href="mailto:gigagroupbd@gmail.com" class="text-decoration-none text-muted">gigagroupbd@gmail.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer_border border-top pt-3 mt-3"></div>
-            
-            <div class="row align-items-center footer_copyright pt-2">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="copyright text-muted small mb-0">Copyright © 2024 Giga Group of Bangladesh. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="small text-muted mb-0">
-                        Leadership: <span class="fw-semibold text-dark">Md. Ashikur Rahman</span> (Chairman &amp; Managing Director)
-                    </p>
+            <!-- Footer Bottom Copyright Bar -->
+            <div class="footer-bottom-bar border-top pt-3 mt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p class="copyright text-muted small mb-0">
+                            &copy; 2024 Giga Group of Bangladesh. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small text-muted mb-0">
+                            Leadership: <span class="fw-bold text-white">Md. Ashikur Rahman</span> (Chairman &amp; Managing Director)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer end here -->
 
-    <!-- js files start here -->
+    <!-- Scripts -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
     <script src="assets/js/smoothScroll.js"></script>
@@ -920,5 +1041,4 @@ Author        : Giga Group Engineering
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
