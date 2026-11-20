@@ -1,153 +1,314 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial & Digital Conglomerate of Bangladesh | Giga Group Bangladesh</title>
-    <meta name="description" content="Giga Group of Bangladesh - Enterprise software, digital creative media, agriculture, seed banking, and nationwide logistics.">
+    <meta name="keywords" content="Giga Group, Giga Soft Limited, Giga Digital Agency, Bangladesh Conglomerate, Md. Ashikur Rahman, ICT, Agriculture, Logistics">
+    <meta name="description" content="Giga Group is one of Bangladesh's most dynamic conglomerates with 10 operating concerns spanning enterprise software, digital agency, agritech, food, logistics, and social foundation.">
+    <meta name="author" content="Giga Group">
+    
+    <title>Giga Group of Bangladesh | Official Corporate Portal</title>
+    
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
-    <!-- Pre-load Dark Theme Script -->
     <script>
       (function() {
         var savedTheme = localStorage.getItem('giga_theme');
-        if (savedTheme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-        } else {
+        if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          savedTheme = 'dark';
+        }
+        if (savedTheme === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
         }
       })();
     </script>
     
-    <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    
-    <!-- Remix Icon & Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    
-    <!-- Aminex-Style Design System CSS -->
-    <link rel="stylesheet" href="assets/css/aminex-style.css">
-    <link rel="stylesheet" href="assets/css/company-pages.css">
-    
-    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/company-pages.css">
 </head>
+
 <body>
+    <div class="main-wrapper">
+        <!-- Header Start -->
+        <header class="flex_container header_container bg-white shadow-sm sticky-top">
+            <div class="container padding_0">
+                <nav class="navbar navbar-expand-xl navbar-light bg-light py-2">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/images/logo/logo.png" alt="Giga Group" class="brand-logo-img">
+                        </a>
+                        
+                        <div class="d-flex align-items-center d-xl-none">
+                            <button class="theme-toggle-btn me-2" id="mobileThemeToggleBtn" aria-label="Toggle theme" onclick="document.getElementById('themeToggleBtn').click()">
+                                <span class="theme-icon">🌙</span>
+                            </button>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
 
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav align-items-xl-center mx-auto my-2 my-lg-0 nav-menu-list">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about_us">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                </li>
+                                
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle ${currentActiveId ? 'active' : ''}" href="index.html#our_companies" id="companiesMegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Companies
+                                </a>
+                                <div class="dropdown-menu mega-menu-content shadow-2xl border-0 p-4" aria-labelledby="companiesMegaDropdown">
+                                    <div class="container-fluid">
+                                        <div class="row g-4">
+                                            <!-- Col 1: Left - Technology & Creative -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-danger-subtle text-danger px-2 py-1 small fw-bold">TECHNOLOGY &amp; CREATIVE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-soft.html" class="mega-link-item">
+                                                            <span class="mega-icon">💻</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Soft Limited <span class="badge bg-danger text-white ms-1">Live Site ↗</span></div>
+                                                                <small class="mega-link-desc">Cloud ERP, AI, FinTech &amp; Mobile Architecture</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-digital-agency.html" class="mega-link-item">
+                                                            <span class="mega-icon">🎨</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Digital Agency <span class="badge bg-primary text-white ms-1">Live Site ↗</span></div>
+                                                                <small class="mega-link-desc">Brand Architecture, Growth Marketing &amp; UI/UX</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pc-care.html" class="mega-link-item">
+                                                            <span class="mega-icon">🖥️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">PC Care &amp; Engineering</div>
+                                                                <small class="mega-link-desc">Enterprise Servers, AMC &amp; Hardware Support</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tender-barta.html" class="mega-link-item">
+                                                            <span class="mega-icon">📊</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Tender Barta</div>
+                                                                <small class="mega-link-desc">e-GP Procurement Intel &amp; Real-time Alerts</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
 
+                                            <!-- Col 2: Center - Food, Agri & CSR -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-success-subtle text-success px-2 py-1 small fw-bold">FOOD, AGRI &amp; CSR</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-food.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌾</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Food Limited</div>
+                                                                <small class="mega-link-desc">100% Pure Organic Processing &amp; Edible Oils</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="krishi-beez-bank.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌱</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Krishi Beez Bank</div>
+                                                                <small class="mega-link-desc">Certified High-Yield Agro-Seeds &amp; Cold Storage</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-foundation.html" class="mega-link-item">
+                                                            <span class="mega-icon">🤝</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Foundation</div>
+                                                                <small class="mega-link-desc">Youth Scholarships, Disaster Relief &amp; CSR</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
 
-    <!-- Top Announcement Bar -->
-    <div class="amx-topbar">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div>
-          <span><i class="ri-map-pin-line me-1 text-danger"></i> Kawran Bazar, Dhaka-1215, Bangladesh</span>
-          <span class="ms-3 d-none d-md-inline"><i class="ri-phone-line me-1 text-danger"></i> +88-02-223310826</span>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <a href="mailto:info@gigagroup.com.bd"><i class="ri-mail-line me-1"></i> info@gigagroup.com.bd</a>
-          <span class="d-none d-sm-inline">|</span>
-          <span class="badge bg-danger-subtle text-danger fw-semibold d-none d-sm-inline">10 Operating Entities</span>
-        </div>
-      </div>
-    </div>
+                                            <!-- Col 3: Right - Logistics & Commerce -->
+                                            <div class="col-lg-4 col-md-12 mega-col">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-warning-subtle text-dark px-2 py-1 small fw-bold">LOGISTICS &amp; COMMERCE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-enterprise.html" class="mega-link-item">
+                                                            <span class="mega-icon">🏗️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Enterprise</div>
+                                                                <small class="mega-link-desc">Commodity Trading &amp; Nationwide Bulk Supply</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="rider-service.html" class="mega-link-item">
+                                                            <span class="mega-icon">🏍️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Rider Service Limited</div>
+                                                                <small class="mega-link-desc">GPS Fleet Parcel Delivery &amp; Express Cargo</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-shop.html" class="mega-link-item">
+                                                            <span class="mega-icon">🛍️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Shop Limited</div>
+                                                                <small class="mega-link-desc">Omnichannel E-Commerce &amp; Tech Gadgets</small>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
 
-    <!-- Main Navigation Header -->
-    <header class="amx-navbar">
-      <div class="container d-flex align-items-center justify-content-between">
-        <a href="index.html" class="amx-nav-brand d-flex align-items-center gap-2 text-decoration-none">
-          <img src="assets/images/logo.png" alt="Giga Group Logo">
-        </a>
+                                                <div class="mega-cta-box p-3 rounded-3 mt-3">
+                                                    <div class="fw-bold text-danger small mb-1">Corporate Directory</div>
+                                                    <p class="text-muted small mb-2">View complete operating structure.</p>
+                                                    <a href="index.html#our_companies" class="btn btn-danger btn-sm w-100 fw-bold">View All 10 Concerns &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#chairman_desk">Chairman's Desk</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="projects.html">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#blogs">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact_us">Contact Us</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="d-flex align-items-center">
+                                <button class="theme-toggle-btn d-none d-xl-flex align-items-center me-3" id="themeToggleBtn" aria-label="Toggle theme">
+                                    <span class="theme-icon me-1">🌙</span>
+                                    <span class="theme-label">Dark</span>
+                                </button>
+                                
+                                <div class="social_btns d-none d-xxl-flex">
+                                    <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                        <img src="assets/images/facebook.png" alt="Facebook">
+                                    </a>
+                                    <a href="https://giga-soft-bd.vercel.app/" target="_blank" rel="noopener noreferrer" title="Giga Soft">
+                                        <img src="assets/images/linkedin.png" alt="LinkedIn">
+                                    </a>
+                                    <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" title="Giga Digital Agency">
+                                        <img src="assets/images/instragram.png" alt="Instagram">
+                                    </a>
+                                </div>
+                            </div>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="d-none d-lg-block">
-          <ul class="amx-nav-links">
-            <li><a href="index.html" class="amx-nav-link active">Home</a></li>
-            <li><a href="services.html" class="amx-nav-link ">Services</a></li>
-            <li><a href="projects.html" class="amx-nav-link ">Projects</a></li>
-            
-            <!-- Aminex-inspired Mega Dropdown -->
-            <li class="amx-dropdown">
-              <span class="amx-nav-link amx-dropdown-toggle ">
-                Our Companies <i class="ri-arrow-down-s-line"></i>
-              </span>
-              <div class="amx-dropdown-menu">
-                <div class="amx-menu-grid">
-                  <div>
-                    <div class="amx-menu-cat-title">Technology &amp; Software</div>
-                    <a href="giga-soft.html" class="amx-menu-item">Giga Soft Limited &rarr;</a>
-                    <a href="pc-care.html" class="amx-menu-item">PC Care &amp; Engineering &rarr;</a>
-                    <a href="tender-barta.html" class="amx-menu-item">Tender Barta &rarr;</a>
-                  </div>
-                  <div>
-                    <div class="amx-menu-cat-title">Media, Food &amp; Agri</div>
-                    <a href="giga-digital-agency.html" class="amx-menu-item">Giga Digital Agency &rarr;</a>
-                    <a href="giga-food.html" class="amx-menu-item">Giga Food Limited &rarr;</a>
-                    <a href="krishi-beez-bank.html" class="amx-menu-item">Krishi Beez Bank &rarr;</a>
-                  </div>
-                  <div>
-                    <div class="amx-menu-cat-title">Logistics &amp; Foundation</div>
-                    <a href="giga-enterprise.html" class="amx-menu-item">Giga Enterprise &rarr;</a>
-                    <a href="rider-service.html" class="amx-menu-item">Rider Service Limited &rarr;</a>
-                    <a href="giga-shop.html" class="amx-menu-item">Giga Shop Limited &rarr;</a>
-                    <a href="giga-foundation.html" class="amx-menu-item">Giga Foundation (CSR) &rarr;</a>
-                  </div>
-                </div>
-              </div>
-            </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Header End -->
 
-            <li><a href="index.html#about_us" class="amx-nav-link">About Us</a></li>
-            <li><a href="index.html#consultation" class="amx-nav-link">Contact</a></li>
-          </ul>
-        </nav>
+        <!-- Hero Header -->
+        <section class="hero_header page-section" id="home">
+            <div class="bg_image_holder">
+                <img src="assets/images/hero_bg.png" alt="Giga Group Hero Background">
+                <div class="shade"></div>
+            </div>
+            <div class="flex_container">
+                <div class="container">
+                    <div class="hero_section">
+                        <div class="content" data-aos="fade-up">
+                            
+                            <!-- 100% visible first line badge -->
+                            <div class="hero-subheading-badge">
+                                <span>🇧🇩</span> INDUSTRIAL &amp; DIGITAL CONGLOMERATE OF BANGLADESH
+                            </div>
+                            
+                            <h1 class="text-white fw-bold mb-3">Building Tomorrow's Bangladesh, Today</h1>
+                            <p class="hero-lead-text text-white-50">
+                                Headquartered in Dhaka, Giga Group orchestrates 10 specialized operating companies across enterprise software, creative media, nationwide logistics, agricultural sovereignty, and community stewardship.
+                            </p>
+                            
+                            <div class="btn_holder mt-4 d-flex flex-wrap gap-3">
+                                <a href="#our_companies" role="button" class="btn btn-danger btn-lg px-4 py-2 text-white fw-bold">Explore Our Companies</a>
+                                <a href="giga-soft.html" role="button" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Giga Soft &rarr;</a>
+                                <a href="giga-digital-agency.html" role="button" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Giga Digital Agency &rarr;</a>
+                            </div>
+                            
+                            <!-- Live Animated Corporate Stats Counter (Never stuck at 0) -->
+                            <div class="row hero-stats-counter mt-5 pt-3 g-3">
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="10" data-suffix="+">10+</h3>
+                                        <p class="stat-label">Operating Companies</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="64" data-suffix="">64</h3>
+                                        <p class="stat-label">Districts Served</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="500" data-suffix="+">500+</h3>
+                                        <p class="stat-label">Enterprise Workforce</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="stat-box-enhanced">
+                                        <h3 class="stat-number live-counter" data-target="100" data-suffix="%">100%</h3>
+                                        <p class="stat-label">Bangladeshi Equity</p>
+                                    </div>
+                                </div>
+                            </div>
 
-        <!-- Right Action Buttons -->
-        <div class="amx-nav-actions">
-          <button class="amx-theme-toggle" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
-            <i class="ri-moon-line" id="themeIcon"></i>
-          </button>
-          <a href="index.html#consultation" class="amx-btn-primary d-none d-sm-inline-flex">
-            Discuss Project <i class="ri-arrow-right-line"></i>
-          </a>
-        </div>
-      </div>
-    </header>
-  
-
-    <!-- AMINEX HERO COVER (.hero-cover-final) -->
-    <section class="hero-cover-final watermark-section" style="background-image: url('assets/images/projects/project-5.jpg') !important;">
-        <div class="watermark-bg-text">GIGA GROUP</div>
-        <div class="hero-cover-overlay">
-            <div class="container hero-cover-content position-relative" style="z-index: 2;" data-aos="fade-up">
-                <span class="hero-cover-eyebrow">
-                    SOFTWARE • CLOUD ERP • DIGITAL MEDIA • AGRI-TECH • LOGISTICS
-                </span>
-                
-                <h1 class="aminex-hero-typography">
-                    Building Digital Infrastructure. Creating Lasting Value.
-                </h1>
-
-                <p class="aminex-hero-copy">
-                    From enterprise cloud software and banking solutions to digital media, agro-food technology, and nationwide logistics, GIGA GROUP delivers integrated corporate solutions across all 64 districts of Bangladesh.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#consultation" class="amx-btn-primary">
-                        Discuss Your Project <i class="ri-arrow-right-line"></i>
-                    </a>
-                    <a href="#expertise" class="amx-btn-dark">
-                        Explore Our Businesses <i class="ri-arrow-down-line"></i>
-                    </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Hero Header End -->
+    </div>
 
-    <!-- CLIENT & PARTNER MARQUEE STRIP (.client-strip) -->
+    <!-- Client & Partner Marquee Strip (Aminex-style Partner Showcase) -->
     <section class="client-strip">
         <div class="container">
-            <div class="client-strip-title">
+            <div class="client-strip-title text-center text-uppercase fw-bold text-muted mb-3" style="font-size: 11px; letter-spacing: 0.16em;">
                 Trusted Client Portfolio &amp; Strategic Technology Alliances
             </div>
         </div>
@@ -180,448 +341,635 @@
         </div>
     </section>
 
-    <!-- AMINEX ABOUT / NARRATIVE SECTION (.amx-about06) -->
-    <section class="amx-about06 watermark-section" id="about_us">
-        <div class="watermark-bg-text">ABOUT GIGA</div>
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="amx-about06-inner" data-aos="fade-up">
-                <span class="amx-about06-kicker">About Giga Group of Bangladesh</span>
-                <h2>Empowering National Growth. <em>Lasting Industrial Sovereignty.</em></h2>
-                <p class="amx-about06-lead">
-                    Giga Group of Bangladesh unites enterprise software, digital creative media, indigenous agriculture, and nationwide logistics — connecting forward-looking strategic architecture with dependable execution.
-                </p>
-                <p class="amx-about06-support">
-                    Headquartered in Kawran Bazar, Dhaka, our multidisciplinary federation operates across all 64 districts with zero-tolerance corporate governance, domestic equity stewardship, and a dedicated workforce of 500+ professionals.
-                </p>
-                <ul class="amx-about06-focus">
-                    <li>Technology &amp; Software</li>
-                    <li>Creative &amp; Digital Media</li>
-                    <li>Food &amp; Seed Agriculture</li>
-                    <li>Logistics &amp; Courier</li>
-                    <li>CSR &amp; Impact</li>
-                </ul>
+    <!-- Corporate Overview (About Us) with Watermark & Complete 1280px Width -->
+    <section class="flex_container about_us page-section py-5 watermark-section" id="about_us">
+        <div class="watermark-bg-text">GIGA GROUP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
+            <div class="row align-items-center g-5">
+                <!-- Left Column: Modern Architecture Visual (NO girl image) -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-visual-wrapper position-relative text-center">
+                        <img src="assets/images/projects/project-5.jpg" alt="Giga Group Corporate Complex" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;">
+                        <div class="about-experience-badge p-3 rounded-3 shadow">
+                            <h4 class="mb-0 fw-bold text-danger">Since 2020</h4>
+                            <small class="text-muted">Headquartered in Kawran Bazar, Dhaka</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Rich, Organized, Filling All Spaces -->
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="content w-100">
+                        <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Corporate Overview</span>
+                        <h2 class="display-6 fw-bold mb-3">One of Bangladesh's Most Progressive Conglomerates</h2>
+                        <p class="lead text-secondary mb-4">
+                            Giga Group of Bangladesh is a multifaceted business federation committed to technological empowerment, indigenous manufacturing, and sustainable market distribution across all 64 districts.
+                        </p>
+                        
+                        <!-- 3-Column Pillar Cards (Utilizing Full Horizontal Width) -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">🎯</div>
+                                    <h5>Our Mission</h5>
+                                    <p>To engineer premier technological and industrial products that elevate quality of life and macroeconomic self-reliance.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">🔭</div>
+                                    <h5>Our Vision</h5>
+                                    <p>To lead the national frontier across software, commerce, and agriculture through technological wisdom and ethical execution.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-feature-card">
+                                    <div class="card-icon">⚖️</div>
+                                    <h5>Governance</h5>
+                                    <p>Uncompromising zero-tolerance compliance, 100% domestic institutional equity, and transparent corporate governance.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4-Item Feature Strip -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>100% Domestic Capital &amp; Bangladeshi Equity</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Food Security &amp; Seed Sovereignty Assurance</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Mission-Critical Cloud Software Ecosystems</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="about-checklist-item">
+                                    <span class="check-icon">✓</span>
+                                    <span>Nationwide Last-Mile Logistics Infrastructure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="btn_holder d-flex flex-wrap gap-3 mt-4">
+                            <a href="#chairman_desk" class="btn btn-danger btn-lg px-4 py-2 fw-bold">Executive Leadership &rarr;</a>
+                            <a href="#contact_us" class="btn btn-outline-danger btn-lg px-4 py-2 fw-semibold">Get in Touch &darr;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- About Us End -->
 
-    <!-- OUR AREAS OF EXPERTISE - 4 CARD GRID (.aminex-core-businesses-v1) -->
-    <section class="aminex-core-businesses-v1 watermark-section" id="expertise">
-        <div class="watermark-bg-text">EXPERTISE</div>
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="aminex-heading-center" data-aos="fade-up">
-                <span class="aminex-eyebrow">OUR CORE DISCIPLINES</span>
-                <h2>Our Areas of Expertise</h2>
-                <p>Integrated capabilities across four primary commercial verticals, delivering proven enterprise solutions for Bangladesh's modern economic landscape.</p>
+    <!-- Operating Entities Section with Watermark -->
+    <section class="flex_container services page-section py-5 bg-light watermark-section" id="our_companies">
+        <div class="watermark-bg-text">GIGA GROUP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
+            <div class="content_header text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Operating Entities</span>
+                <h2 class="display-6 fw-bold">Our Companies &amp; Sister Concerns</h2>
+                <p class="text-secondary mx-auto max-w-650">Click on any sister concern below to explore its dedicated page, live website preview, product catalogs, and detailed specifications.</p>
+                
+                <!-- Category Filter Buttons -->
+                <div class="company-filter-nav d-flex flex-wrap justify-content-center gap-2 mt-4">
+                    <button class="company-filter-btn active" data-filter="all">All Concerns</button>
+                    <button class="company-filter-btn" data-filter="tech">Technology &amp; Software</button>
+                    <button class="company-filter-btn" data-filter="creative">Creative &amp; Media</button>
+                    <button class="company-filter-btn" data-filter="agri">Food &amp; Agriculture</button>
+                    <button class="company-filter-btn" data-filter="logistics">Logistics &amp; Commerce</button>
+                    <button class="company-filter-btn" data-filter="foundation">Foundation &amp; CSR</button>
+                </div>
             </div>
 
-            <div class="aminex-core-businesses-grid">
-                <!-- Card 01 -->
-                <article class="aminex-core-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-1.jpg');">
-                        <span class="aminex-card-number">01</span>
-                        <span class="aminex-card-icon"><i class="ri-code-s-slash-line"></i></span>
-                    </div>
-                    <div class="aminex-core-card-body">
-                        <h3>Technology &amp; Software</h3>
-                        <p>Enterprise Cloud ERP, FinTech multi-channel banking, AI microservices, and dedicated corporate hardware engineering.</p>
-                        <a href="services.html#tech">Explore Expertise <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </article>
+            <div class="row g-4 service_list_enhanced">
 
-                <!-- Card 02 -->
-                <article class="aminex-core-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-2.jpg');">
-                        <span class="aminex-card-number">02</span>
-                        <span class="aminex-card-icon"><i class="ri-palette-line"></i></span>
+                <!-- 1. Giga Soft Limited -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-soft.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/gigasoft.png" alt="Giga Soft Limited" class="img-fluid">
+                            </a>
+                            <span class="badge bg-danger text-white">Technology</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-soft.html" class="text-decoration-none text-dark">Giga Soft Limited</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Pioneering enterprise software engineering, cloud architecture, custom ERP suites, mobile applications, and AI-driven workflow automation.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Cloud ERP</span>
+                            <span class="badge bg-light text-dark border">FinTech</span>
+                            <span class="badge bg-light text-dark border">AI Solutions</span>
+                        </div>
+                        <div class="d-flex flex-column gap-2 mt-auto">
+                            <a href="giga-soft.html" class="btn btn-outline-danger w-100 fw-semibold">
+                                View Company Details &rarr;
+                            </a>
+                            <a href="https://giga-soft-bd.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger w-100 fw-semibold d-flex justify-content-center align-items-center">
+                                Visit Live Website <span class="ms-2">↗</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="aminex-core-card-body">
-                        <h3>Creative &amp; Digital Media</h3>
-                        <p>360° brand advertising, television commercial production, UI/UX design, performance digital marketing, and PR.</p>
-                        <a href="services.html#media">Explore Expertise <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </article>
+                </div>
 
-                <!-- Card 03 -->
-                <article class="aminex-core-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-3.jpg');">
-                        <span class="aminex-card-number">03</span>
-                        <span class="aminex-card-icon"><i class="ri-plant-line"></i></span>
+                <!-- 2. Giga Digital Agency -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="creative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-digital-agency.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/logo.png" alt="Giga Digital Agency" class="img-fluid">
+                            </a>
+                            <span class="badge bg-primary text-white">Creative &amp; Media</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-digital-agency.html" class="text-decoration-none text-dark">Giga Digital Agency</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Premier digital creative agency delivering performance marketing, corporate branding, UI/UX engineering, and high-impact campaigns.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Brand Identity</span>
+                            <span class="badge bg-light text-dark border">Growth Ads</span>
+                            <span class="badge bg-light text-dark border">UI/UX Design</span>
+                        </div>
+                        <div class="d-flex flex-column gap-2 mt-auto">
+                            <a href="giga-digital-agency.html" class="btn btn-outline-danger w-100 fw-semibold">
+                                View Company Details &rarr;
+                            </a>
+                            <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger w-100 fw-semibold d-flex justify-content-center align-items-center">
+                                Visit Live Website <span class="ms-2">↗</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="aminex-core-card-body">
-                        <h3>Food &amp; Agri-Tech</h3>
-                        <p>Climate-resilient hybrid seed banking, indigenous crop preservation, cold-chain distribution, and organic nutrition processing.</p>
-                        <a href="services.html#agri">Explore Expertise <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </article>
+                </div>
 
-                <!-- Card 04 -->
-                <article class="aminex-core-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-4.jpg');">
-                        <span class="aminex-card-number">04</span>
-                        <span class="aminex-card-icon"><i class="ri-truck-line"></i></span>
+                <!-- 3. PC Care & Engineering Limited -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="pc-care.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/pccare.png" alt="PC Care & Engineering" class="img-fluid">
+                            </a>
+                            <span class="badge bg-secondary text-white">Hardware &amp; IT</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="pc-care.html" class="text-decoration-none text-dark">PC Care &amp; Engineering</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Mission-critical IT infrastructure deployment, computer hardware maintenance, enterprise server diagnostics, and institutional AMC support.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Servers</span>
+                            <span class="badge bg-light text-dark border">Hardware AMC</span>
+                            <span class="badge bg-light text-dark border">Data Centers</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="pc-care.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
                     </div>
-                    <div class="aminex-core-card-body">
-                        <h3>Logistics &amp; Commerce</h3>
-                        <p>64-district express courier delivery, telematics fleet routing, government e-procurement portals, and B2B supplies.</p>
-                        <a href="services.html#logistics">Explore Expertise <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+
+                <!-- 4. Giga Food Limited -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="agri" data-aos="fade-up">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-food.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/gigafood.png" alt="Giga Food Limited" class="img-fluid">
+                            </a>
+                            <span class="badge bg-success text-white">Food &amp; Consumer</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-food.html" class="text-decoration-none text-dark">Giga Food Limited</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Dedicated to hygienic processing, pure organic food manufacturing, packaged commodities, and food security standards.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Pure Edible Oil</span>
+                            <span class="badge bg-light text-dark border">Organic Rice</span>
+                            <span class="badge bg-light text-dark border">BSTI Certified</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="giga-food.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- 5. Krishi Beez Bank -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="agri" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="krishi-beez-bank.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/kbblogo.jpg" alt="Krishi Beez Bank" class="img-fluid">
+                            </a>
+                            <span class="badge bg-success text-white">Agritech</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="krishi-beez-bank.html" class="text-decoration-none text-dark">Krishi Beez Bank</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Safeguarding seed sovereignty and agricultural vitality by supplying certified high-yield agro-seeds and scientific seed banking.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Certified Seeds</span>
+                            <span class="badge bg-light text-dark border">Cold Storage</span>
+                            <span class="badge bg-light text-dark border">Agronomy Desk</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="krishi-beez-bank.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Giga Enterprise -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-enterprise.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/GigaEnterprise.png" alt="Giga Enterprise" class="img-fluid">
+                            </a>
+                            <span class="badge bg-dark text-white">Commodities &amp; Trade</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-enterprise.html" class="text-decoration-none text-dark">Giga Enterprise</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Large-scale institutional procurement, industrial material supply chains, bulk commercial trade, and strategic commodity distribution.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Bulk Procurement</span>
+                            <span class="badge bg-light text-dark border">Supply Chains</span>
+                            <span class="badge bg-light text-dark border">Industrial Trade</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="giga-enterprise.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Rider Service Limited -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="rider-service.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/rider.png" alt="Rider Service Limited" class="img-fluid">
+                            </a>
+                            <span class="badge bg-warning text-dark">Logistics</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="rider-service.html" class="text-decoration-none text-dark">Rider Service Limited</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Tech-driven courier, fast-paced parcel delivery, real-time GPS fleet tracking, and dependable inter-district cargo routing.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Express Courier</span>
+                            <span class="badge bg-light text-dark border">GPS Fleet</span>
+                            <span class="badge bg-light text-dark border">COD Logistics</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="rider-service.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Tender Barta -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="tech" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="tender-barta.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/tender.png" alt="Tender Barta" class="img-fluid">
+                            </a>
+                            <span class="badge bg-info text-dark">Business Intel</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="tender-barta.html" class="text-decoration-none text-dark">Tender Barta</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Bangladesh's premier e-tender intelligence portal delivering real-time e-GP tender notices, bid analysis, and instant alert engines.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">e-GP Analytics</span>
+                            <span class="badge bg-light text-dark border">SMS Alerts</span>
+                            <span class="badge bg-light text-dark border">Bid Data</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="tender-barta.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Giga Shop Limited -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="logistics" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-shop.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/gigashop.png" alt="Giga Shop" class="img-fluid">
+                            </a>
+                            <span class="badge bg-dark text-white">E-Commerce</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-shop.html" class="text-decoration-none text-dark">Giga Shop Limited</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            Curated omnichannel retail marketplace offering guaranteed authentic consumer electronics, home appliances, and organic foods.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Gadgets</span>
+                            <span class="badge bg-light text-dark border">Secure Pay</span>
+                            <span class="badge bg-light text-dark border">Warranty Claim</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="giga-shop.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Giga Foundation -->
+                <div class="col-lg-4 col-md-6 company-item" data-category="foundation" data-aos="fade-up">
+                    <div class="service-card-item h-100 p-4 rounded-4 border shadow-sm d-flex flex-column bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a href="giga-foundation.html" class="company-logo-wrap p-2 rounded-3 bg-white border d-block">
+                                <img src="assets/images/gigafoundation.png" alt="Giga Foundation" class="img-fluid">
+                            </a>
+                            <span class="badge bg-danger text-white">Social Impact &amp; CSR</span>
+                        </div>
+                        <h4 class="fw-bold mb-2"><a href="giga-foundation.html" class="text-decoration-none text-dark">Giga Foundation</a></h4>
+                        <p class="text-secondary small flex-grow-1">
+                            The non-profit philanthropic arm of Giga Group delivering community health camps, scholarships, and disaster relief.
+                        </p>
+                        <div class="capability-tags mb-3 d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark border">Scholarships</span>
+                            <span class="badge bg-light text-dark border">Disaster Relief</span>
+                            <span class="badge bg-light text-dark border">Youth Coding</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="giga-foundation.html" class="btn btn-outline-danger w-100 fw-semibold">View Company Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+    <!-- Operating Entities End -->
 
-    <!-- AMINEX FOCUS DISCIPLINES (Alternating 50/50 Cards) (.amx-focus01) -->
-    <section class="amx-focus01 watermark-section" id="disciplines">
-        <div class="watermark-bg-text">DISCIPLINES</div>
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="aminex-heading-center mb-5" data-aos="fade-up">
-                <span class="aminex-eyebrow">ENTERPRISE SOLUTIONS</span>
-                <h2>Four Disciplines. One Commitment to National Progress.</h2>
-                <p>Explore Giga Group's flagship operating divisions, each crafted with specialized capabilities, domain leadership, and full-lifecycle support.</p>
-            </div>
-
-            <!-- Feature 01: Tech & Software -->
-            <article class="amx-focus-feature" data-aos="fade-up">
-                <div class="amx-focus-visual" style="background-image: url('assets/images/projects/project-1.jpg');">
-                    <div class="amx-focus-art">Architecting next-generation digital sovereignty.</div>
-                </div>
-                <div class="amx-focus-copy">
-                    <span class="amx-focus-num">01 / TECHNOLOGY &amp; SOFTWARE</span>
-                    <h3>Enterprise Cloud ERP &amp; FinTech Core</h3>
-                    <p>
-                        Powering commercial banks, multinational manufacturers, and retail chains with fault-tolerant ERP architectures, microservices APIs, and secure real-time financial switches.
-                    </p>
-                    <div class="amx-focus-tags">
-                        <span class="amx-focus-tag">Cloud ERP</span>
-                        <span class="amx-focus-tag">Core Banking</span>
-                        <span class="amx-focus-tag">99.99% Uptime SLA</span>
-                        <span class="amx-focus-tag">120+ Deployments</span>
-                    </div>
-                    <div class="amx-focus-actions">
-                        <a href="giga-soft.html" class="amx-btn-primary">Explore Giga Soft <i class="ri-arrow-right-line"></i></a>
-                        <a href="project-banking-erp.html" class="amx-btn-dark">View Case Study ↗</a>
+    <!-- Chairman's Desk Section -->
+    <section class="flex_container chairman_desk page-section py-5 watermark-section" id="chairman_desk">
+        <div class="watermark-bg-text">LEADERSHIP</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center" data-aos="fade-right">
+                    <div class="chairman-portrait-wrapper p-3 rounded-4 shadow bg-white border">
+                        <img src="assets/images/leadership/ashikur-rahman.jpg" alt="Md. Ashikur Rahman, Chairman & Managing Director" class="img-fluid rounded-3 mb-3 shadow-sm chairman-img">
+                        <h3 class="fw-bold text-dark mb-1">Md. Ashikur Rahman</h3>
+                        <p class="text-danger fw-semibold mb-2">Chairman &amp; Managing Director</p>
+                        <span class="badge bg-dark text-white px-3 py-2">Giga Group of Bangladesh</span>
                     </div>
                 </div>
-            </article>
-
-            <!-- Feature 02: Creative & Digital Media -->
-            <article class="amx-focus-feature" data-aos="fade-up">
-                <div class="amx-focus-visual" style="background-image: url('assets/images/projects/project-2.jpg');">
-                    <div class="amx-focus-art">Inspiring creative narratives built for market impact.</div>
-                </div>
-                <div class="amx-focus-copy">
-                    <span class="amx-focus-num">02 / CREATIVE &amp; DIGITAL MEDIA</span>
-                    <h3>Full-Stack Brand &amp; Media Production</h3>
-                    <p>
-                        Giga Digital Agency elevates brand equity through data-informed creative storytelling, 4K television commercial production, UI/UX digital design systems, and viral social campaigns.
-                    </p>
-                    <div class="amx-focus-tags">
-                        <span class="amx-focus-tag">Brand Strategy</span>
-                        <span class="amx-focus-tag">TVC &amp; Video Production</span>
-                        <span class="amx-focus-tag">Performance Marketing</span>
-                        <span class="amx-focus-tag">Web &amp; App UI/UX</span>
-                    </div>
-                    <div class="amx-focus-actions">
-                        <a href="giga-digital-agency.html" class="amx-btn-primary">Explore Digital Agency <i class="ri-arrow-right-line"></i></a>
-                        <a href="project-digital-campaign.html" class="amx-btn-dark">View Case Study ↗</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Feature 03: Agri-Tech & Food -->
-            <article class="amx-focus-feature" data-aos="fade-up">
-                <div class="amx-focus-visual" style="background-image: url('assets/images/projects/project-3.jpg');">
-                    <div class="amx-focus-art">Securing agricultural independence and farmer equity.</div>
-                </div>
-                <div class="amx-focus-copy">
-                    <span class="amx-focus-num">03 / AGRI-TECH &amp; FOOD SECURITY</span>
-                    <h3>Climate-Resilient Seed Banking &amp; Nutrition</h3>
-                    <p>
-                        Through Krishi Beez Bank and Giga Food Limited, we distribute high-germination, disease-resistant seeds to over 150,000 farmers, backed by modern cold-chain infrastructure and hygienic packaging.
-                    </p>
-                    <div class="amx-focus-tags">
-                        <span class="amx-focus-tag">Hybrid Seed Banking</span>
-                        <span class="amx-focus-tag">Climate Adaptation</span>
-                        <span class="amx-focus-tag">150K+ Farmers</span>
-                        <span class="amx-focus-tag">64 Districts</span>
-                    </div>
-                    <div class="amx-focus-actions">
-                        <a href="krishi-beez-bank.html" class="amx-btn-primary">Explore Krishi Beez <i class="ri-arrow-right-line"></i></a>
-                        <a href="project-krishi-network.html" class="amx-btn-dark">View Case Study ↗</a>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="chairman-statement-content">
+                        <span class="badge bg-danger text-white px-3 py-2 text-uppercase fw-bold mb-3">Chairman's Desk</span>
+                        <h2 class="display-6 fw-bold mb-4">"Building Businesses That Endure, Inspire, and Elevate Our Nation"</h2>
+                        
+                        <blockquote class="blockquote border-start border-danger border-4 ps-3 fst-italic text-secondary mb-4">
+                            "True corporate achievement is measured not merely by balance sheet growth, but by the tangible industrial sovereignty and societal value we forge for Bangladesh."
+                        </blockquote>
+                        
+                        <p class="text-secondary">
+                            Under the visionary stewardship of Md. Ashikur Rahman, Giga Group was established with a clear mandate: to combine cutting-edge modern engineering with rooted community values. Over the years, this vision has expanded into 10 operating subsidiaries touching digital services, primary agriculture, commerce, and philanthropic initiatives.
+                        </p>
+                        
+                        <ul class="list-unstyled d-flex flex-column gap-2 mt-4 text-dark fw-medium">
+                            <li class="d-flex align-items-center">
+                                <span class="badge bg-danger rounded-circle p-1 me-2">✓</span>
+                                100% Domestic Capital &amp; Bangladeshi Institutional Equity
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span class="badge bg-danger rounded-circle p-1 me-2">✓</span>
+                                Ten Specialized Operating Concerns Across Essential Growth Sectors
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span class="badge bg-danger rounded-circle p-1 me-2">✓</span>
+                                Operational Reach &amp; Distribution Across All 64 Districts
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span class="badge bg-danger rounded-circle p-1 me-2">✓</span>
+                                Zero-Tolerance Corporate Governance &amp; Ethical Stewardship
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </article>
-
-            <!-- Feature 04: Logistics & Courier -->
-            <article class="amx-focus-feature" data-aos="fade-up">
-                <div class="amx-focus-visual" style="background-image: url('assets/images/projects/project-4.jpg');">
-                    <div class="amx-focus-art">Connecting urban hubs and rural upazilas in 24 hours.</div>
-                </div>
-                <div class="amx-focus-copy">
-                    <span class="amx-focus-num">04 / LOGISTICS &amp; ENTERPRISE COMMERCE</span>
-                    <h3>Nationwide Distribution &amp; Telematics Fleet</h3>
-                    <p>
-                        Rider Service Limited operates automated sorting hubs and a dedicated vehicle fleet ensuring rapid last-mile delivery, refrigerated perishables transport, and real-time shipment transparency.
-                    </p>
-                    <div class="amx-focus-tags">
-                        <span class="amx-focus-tag">GPS Fleet Telematics</span>
-                        <span class="amx-focus-tag">Next-Day Hubs</span>
-                        <span class="amx-focus-tag">Cold Chain Cargo</span>
-                        <span class="amx-focus-tag">E-Tender Integration</span>
-                    </div>
-                    <div class="amx-focus-actions">
-                        <a href="rider-service.html" class="amx-btn-primary">Explore Logistics <i class="ri-arrow-right-line"></i></a>
-                        <a href="project-nationwide-logistics.html" class="amx-btn-dark">View Case Study ↗</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- 7-STEP PROCESS TIMELINE (.process-section aminex-process-v224) -->
-    <section class="aminex-process-v224 watermark-section" id="process">
-        <div class="watermark-bg-text">PROCESS</div>
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="aminex-heading-center" data-aos="fade-up">
-                <span class="aminex-eyebrow">STANDARDIZED EXECUTION</span>
-                <h2>From Consultation to Project Handover</h2>
-                <p>Giga Group follows a disciplined, ISO-standardized delivery pipeline for software engineering, digital campaigns, infrastructure, and nationwide deployments.</p>
-            </div>
-
-            <div class="process-timeline" data-aos="fade-up">
-                <div class="process-step">
-                    <strong>01</strong>
-                    <div class="process-icon"><i class="ri-customer-service-2-line"></i></div>
-                    <h3>Consultation</h3>
-                    <p>Strategic requirement discovery &amp; feasibility roadmap</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>02</strong>
-                    <div class="process-icon"><i class="ri-pencil-ruler-2-line"></i></div>
-                    <h3>Architecture</h3>
-                    <p>System blueprints, wireframes &amp; workflow design</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>03</strong>
-                    <div class="process-icon"><i class="ri-code-line"></i></div>
-                    <h3>Engineering</h3>
-                    <p>Enterprise coding, asset creation &amp; staging</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>04</strong>
-                    <div class="process-icon"><i class="ri-shield-check-line"></i></div>
-                    <h3>QA &amp; Security</h3>
-                    <p>Rigorous stress tests &amp; vulnerability auditing</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>05</strong>
-                    <div class="process-icon"><i class="ri-upload-cloud-line"></i></div>
-                    <h3>Deployment</h3>
-                    <p>Zero-downtime production rollout &amp; integration</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>06</strong>
-                    <div class="process-icon"><i class="ri-user-settings-line"></i></div>
-                    <h3>Training</h3>
-                    <p>Stakeholder onboarding &amp; documentation</p>
-                </div>
-
-                <div class="process-step">
-                    <strong>07</strong>
-                    <div class="process-icon"><i class="ri-checkbox-circle-line"></i></div>
-                    <h3>Handover &amp; SLA</h3>
-                    <p>Final sign-off with 24/7 mission-critical support</p>
-                </div>
-            </div>
-
-            <div class="text-center mt-5" data-aos="fade-up">
-                <a href="services.html" class="amx-btn-primary">Explore All Enterprise Services <i class="ri-arrow-right-line"></i></a>
             </div>
         </div>
     </section>
+    <!-- Chairman's Desk End -->
 
-    <!-- FEATURED ENTERPRISE PROJECTS SHOWCASE (Aminex Projects Style) -->
-    <section class="py-5 watermark-section" style="background: var(--amx-bg);" id="projects_showcase">
-        <div class="watermark-bg-text">PROJECTS</div>
-        <div class="container position-relative py-4" style="z-index: 1;">
-            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5" data-aos="fade-up">
-                <div>
-                    <span class="aminex-eyebrow">PROVEN RECORD</span>
-                    <h2 class="display-6 fw-bold mb-2">Projects You Can Explore</h2>
-                    <p class="text-secondary mb-0">High-impact enterprise solutions delivered across Bangladesh's core economic sectors.</p>
-                </div>
-                <a href="projects.html" class="amx-btn-dark">View All Projects <i class="ri-arrow-right-line"></i></a>
+    <!-- Case Studies / Projects Section -->
+    <section class="flex_container case_studies page-section py-5 bg-light watermark-section" id="case_studies">
+        <div class="watermark-bg-text">IMPACT</div>
+        <div class="container py-4 position-relative" style="z-index: 1;">
+            <div class="content_header text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Demonstrated Impact</span>
+                <h2 class="display-6 fw-bold">Enterprise Projects &amp; Milestones</h2>
+                <p class="text-secondary mx-auto max-w-650">Real-world technological and commercial executions engineered by Giga Group's specialized operating divisions.</p>
             </div>
 
             <div class="row g-4">
-                <!-- Project Card 1 -->
+                <!-- Case Study 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="case-study-card h-100 rounded-4 overflow-hidden border shadow-sm bg-white d-flex flex-column">
+                        <div class="case-study-img-holder">
+                            <img src="assets/images/projects/project-1.jpg" alt="Enterprise Cloud Modernization" class="img-fluid w-100">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-danger text-white mb-2 align-self-start">Giga Soft Limited</span>
+                            <h4 class="fw-bold mb-2">Enterprise Cloud ERP Modernization</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">Architected and deployed an omnichannel ERP system handling multi-branch inventory, real-time fiscal accounting, and supply chain telemetry.</p>
+                            <div class="d-flex gap-2">
+                                <a href="giga-soft.html" class="fw-bold text-danger text-decoration-none">Company Details &rarr;</a>
+                                <span class="text-muted">|</span>
+                                <a href="https://giga-soft-bd.vercel.app/" target="_blank" rel="noopener noreferrer" class="fw-bold text-danger text-decoration-none">Live Site ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="aminex-core-card h-100">
-                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-1.jpg');">
-                            <span class="aminex-card-number">FinTech</span>
+                    <div class="case-study-card h-100 rounded-4 overflow-hidden border shadow-sm bg-white d-flex flex-column">
+                        <div class="case-study-img-holder">
+                            <img src="assets/images/projects/project-2.jpg" alt="Omnichannel Brand Engine" class="img-fluid w-100">
                         </div>
-                        <div class="aminex-core-card-body">
-                            <span class="text-danger small fw-bold mb-1">GIGA SOFT LIMITED</span>
-                            <h3>Grameen Bank HQ &amp; Core ERP</h3>
-                            <p>End-to-end cloud ERP deployment with multi-branch reconciliation and automated compliance reporting.</p>
-                            <a href="project-banking-erp.html">Explore Project ↗</a>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-primary text-white mb-2 align-self-start">Giga Digital Agency</span>
+                            <h4 class="fw-bold mb-2">Omnichannel Brand Engine &amp; Media</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">Full-funnel creative overhaul, conversion rate optimization, and brand positioning delivering 4x digital engagement metrics.</p>
+                            <div class="d-flex gap-2">
+                                <a href="giga-digital-agency.html" class="fw-bold text-danger text-decoration-none">Company Details &rarr;</a>
+                                <span class="text-muted">|</span>
+                                <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="fw-bold text-danger text-decoration-none">Live Site ↗</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
+                <!-- Case Study 3 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="aminex-core-card h-100">
-                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-2.jpg');">
-                            <span class="aminex-card-number">FinTech Switch</span>
+                    <div class="case-study-card h-100 rounded-4 overflow-hidden border shadow-sm bg-white d-flex flex-column">
+                        <div class="case-study-img-holder">
+                            <img src="assets/images/projects/project-3.jpg" alt="Agritech Seed Sovereign Storage" class="img-fluid w-100">
                         </div>
-                        <div class="aminex-core-card-body">
-                            <span class="text-danger small fw-bold mb-1">FINANCIAL INFRASTRUCTURE</span>
-                            <h3>Multi-Channel Payment Switch</h3>
-                            <p>High-throughput payment orchestration processing over 500,000 daily transactions with 99.99% uptime.</p>
-                            <a href="project-fintech-switch.html">Explore Project ↗</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="aminex-core-card h-100">
-                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-3.jpg');">
-                            <span class="aminex-card-number">Agri-Tech</span>
-                        </div>
-                        <div class="aminex-core-card-body">
-                            <span class="text-danger small fw-bold mb-1">KRISHI BEEZ BANK</span>
-                            <h3>Climate Hybrid Seed Network</h3>
-                            <p>Nationwide distribution of certified flood-tolerant paddy and vegetable seeds to 150,000+ registered farmers.</p>
-                            <a href="project-krishi-network.html">Explore Project ↗</a>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-success text-white mb-2 align-self-start">Krishi Beez Bank &amp; Food</span>
+                            <h4 class="fw-bold mb-2">Seed Sovereign Cold Chain Storage</h4>
+                            <p class="text-secondary small mb-3 flex-grow-1">Constructed climate-controlled germplasm facilities ensuring zero genetic degradation and emergency buffer supplies for 25,000+ local farming partners.</p>
+                            <a href="krishi-beez-bank.html" class="fw-bold text-danger text-decoration-none">Explore Seed Bank Details &rarr;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Case Studies End -->
 
-    <!-- EXECUTIVE LEADERSHIP SECTION -->
-    <section class="py-5 watermark-section" style="background: var(--amx-bg-surface);" id="leadership">
-        <div class="watermark-bg-text">LEADERSHIP</div>
-        <div class="container position-relative py-4" style="z-index: 1;">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-4 text-center" data-aos="fade-right">
-                    <div class="p-3 rounded-4 shadow" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border-strong);">
-                        <img src="assets/images/leadership/ashikur-rahman.jpg" alt="Md. Ashikur Rahman" class="img-fluid rounded-4 mb-3" style="max-height: 340px; width: 100%; object-fit: cover;">
-                        <h4 class="fw-bold mb-1">Md. Ashikur Rahman</h4>
-                        <p class="text-danger small fw-semibold mb-2">Chairman &amp; Managing Director</p>
-                        <p class="text-muted small mb-0">Giga Group of Bangladesh</p>
+    <!-- Blogs & News -->
+    <section class="flex_container blogs page-section py-5" id="blogs">
+        <div class="container py-4">
+            <div class="content_header text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Media &amp; Press</span>
+                <h2 class="display-6 fw-bold">News &amp; Corporate Announcements</h2>
+                <p class="text-secondary">Stay updated with the latest technological developments, partnerships, and achievements from Giga Group.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="blog-card-enhanced h-100 bg-white border rounded-4 overflow-hidden shadow-sm d-flex flex-column">
+                        <div class="img_holder">
+                            <img src="assets/images/news/blog-2-1.jpg" alt="Giga Soft AI Cloud Launch" class="img-fluid w-100">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-danger-subtle text-danger align-self-start mb-2">Software &amp; AI</span>
+                            <h5 class="fw-bold mb-2">Giga Soft Limited Deploys Next-Gen Enterprise Cloud Suite</h5>
+                            <p class="date text-muted small mb-3">November 18, 2024</p>
+                            <p class="text-secondary small flex-grow-1">Announcing our high-throughput AI workflow engine designed for large corporate institutions across Bangladesh.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="giga-soft.html" class="btn btn-outline-danger btn-sm w-50">Profile &rarr;</a>
+                                <a href="https://giga-soft-bd.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm w-50">Live Site ↗</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-8" data-aos="fade-left">
-                    <span class="aminex-eyebrow">EXECUTIVE STEWARDSHIP</span>
-                    <h2 class="display-6 fw-bold mb-3">Architecting Sustainable Value for Bangladesh</h2>
-                    <blockquote class="lead text-secondary mb-4 p-3 rounded-3" style="border-left: 4px solid var(--amx-primary); background: var(--amx-glass);">
-                        "Building businesses that endure, inspire, and elevate our nation is the single benchmark of Giga Group. True corporate achievement is measured not merely by balance sheet growth, but by the tangible industrial sovereignty and societal value we forge for Bangladesh."
-                    </blockquote>
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="p-3 rounded-3 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
-                                <h6 class="fw-bold text-danger mb-1"><i class="ri-checkbox-circle-fill me-1"></i> 100% Domestic Capital</h6>
-                                <p class="small text-muted mb-0">Committed to local employment and reinvesting retained earnings into national infrastructure.</p>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card-enhanced h-100 bg-white border rounded-4 overflow-hidden shadow-sm d-flex flex-column">
+                        <div class="img_holder">
+                            <img src="assets/images/news/blog-2-2.jpg" alt="Giga Digital Agency Performance" class="img-fluid w-100">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-primary-subtle text-primary align-self-start mb-2">Media &amp; Design</span>
+                            <h5 class="fw-bold mb-2">Giga Digital Agency Expands Enterprise Design Capabilities</h5>
+                            <p class="date text-muted small mb-3">October 24, 2024</p>
+                            <p class="text-secondary small flex-grow-1">Expanding our creative studio to deliver world-standard corporate branding and automated advertising pipelines.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="giga-digital-agency.html" class="btn btn-outline-danger btn-sm w-50">Profile &rarr;</a>
+                                <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm w-50">Live Site ↗</a>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="p-3 rounded-3 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
-                                <h6 class="fw-bold text-danger mb-1"><i class="ri-checkbox-circle-fill me-1"></i> Ethical Governance</h6>
-                                <p class="small text-muted mb-0">Zero-tolerance compliance, financial transparency, and ISO quality management systems.</p>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card-enhanced h-100 bg-white border rounded-4 overflow-hidden shadow-sm d-flex flex-column">
+                        <div class="img_holder">
+                            <img src="assets/images/news/blog-2-3.jpg" alt="Krishi Beez Bank Expansion" class="img-fluid w-100">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-success-subtle text-success align-self-start mb-2">Agriculture</span>
+                            <h5 class="fw-bold mb-2">Krishi Beez Bank Partners with 40+ Upazila Farmer Co-operatives</h5>
+                            <p class="date text-muted small mb-3">September 12, 2024</p>
+                            <p class="text-secondary small flex-grow-1">Broadening the reach of disease-resistant seeds and climate-smart agronomy consultation in northern districts.</p>
+                            <a href="krishi-beez-bank.html" class="btn btn-outline-danger btn-sm mt-3 w-100">View Seed Bank Profile &rarr;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Blogs End -->
 
-    <!-- AMINEX CONSULTATION & INQUIRY SECTION (.aminex-consultation-final) -->
-    <section class="aminex-consultation-final watermark-section" id="consultation">
-        <div class="watermark-bg-text">CONTACT</div>
-        <div class="container position-relative" style="z-index: 1;">
-            <div class="consultation-box" data-aos="fade-up">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-5">
-                        <span class="aminex-eyebrow">GET IN TOUCH</span>
-                        <h2 class="display-6 fw-bold mb-3">Have an Enterprise Project in Mind?</h2>
-                        <p class="text-secondary mb-4">
-                            Connect with our corporate advisory team to discuss turnkey software development, digital agency campaigns, seed distribution, or logistics contracts.
-                        </p>
-                        
-                        <div class="d-flex flex-column gap-3 mb-4">
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="process-icon flex-shrink-0" style="width: 42px; height: 42px; font-size: 18px;"><i class="ri-map-pin-2-line"></i></div>
-                                <div>
-                                    <strong class="d-block text-secondary small">Headquarters</strong>
-                                    <span>TCB Bhaban, Kawran Bazar C/A, Dhaka-1215, Bangladesh</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="process-icon flex-shrink-0" style="width: 42px; height: 42px; font-size: 18px;"><i class="ri-phone-line"></i></div>
-                                <div>
-                                    <strong class="d-block text-secondary small">Telephone Hotline</strong>
-                                    <span>+88-02-223310826 / +880 1912 000000</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="process-icon flex-shrink-0" style="width: 42px; height: 42px; font-size: 18px;"><i class="ri-mail-line"></i></div>
-                                <div>
-                                    <strong class="d-block text-secondary small">Official Email</strong>
-                                    <span>info@gigagroup.com.bd</span>
-                                </div>
+    <!-- Contact Section -->
+    <section class="flex_container page-section py-5 bg-light" id="contact_us">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Direct Communication</span>
+                    <h2 class="display-6 fw-bold mb-3">Partner with Giga Group</h2>
+                    <p class="text-secondary mb-4">
+                        Whether you seek enterprise software partnerships, institutional supplies, investment inquiries, or community initiatives, our corporate desk is ready to assist.
+                    </p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">📍</div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Corporate Headquarters</h6>
+                                <p class="text-muted small mb-0">46, Kazi Nazrul Islam Avenue, Kawran Bazar, Dhaka-1215, Bangladesh</p>
                             </div>
                         </div>
 
-                        <a href="https://wa.me/8801912000000?text=Hello+Giga+Group+I+would+like+to+discuss+an+enterprise+project" target="_blank" class="amx-btn-dark">
-                            <i class="ri-whatsapp-line text-success"></i> Instant WhatsApp Consultation
-                        </a>
-                    </div>
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">📞</div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Telephone Hotline</h6>
+                                <p class="text-muted small mb-0"><a href="tel:+8801778741894" class="text-decoration-none text-muted">+88-01778-741894</a></p>
+                            </div>
+                        </div>
 
-                    <div class="col-lg-7">
-                        <form class="consultation-form p-4 rounded-4" style="background: var(--amx-bg-surface); border: 1px solid var(--amx-border);" onsubmit="event.preventDefault(); alert('Thank you! Your enterprise inquiry has been received by Giga Group Corporate Affairs.'); this.reset();">
+                        <div class="contact-info-card p-3 rounded-4 border bg-white shadow-sm d-flex align-items-center">
+                            <div class="contact-icon-box bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-3">✉️</div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Official Email Desk</h6>
+                                <p class="text-muted small mb-0"><a href="mailto:gigagroupbd@gmail.com" class="text-decoration-none text-muted">gigagroupbd@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form-box p-4 p-md-5 rounded-4 border bg-white shadow-sm">
+                        <h4 class="fw-bold mb-3">Submit Corporate Inquiry</h4>
+                        <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Giga Group. Our representative will contact you shortly.');">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" placeholder="e.g. Tariq Ahmed" required>
+                                    <label class="form-label small fw-semibold">Your Full Name *</label>
+                                    <input type="text" class="form-control" required placeholder="Tariq Ahmed">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Corporate Email Address *</label>
-                                    <input type="email" class="form-control" placeholder="e.g. t.ahmed@institution.com" required>
+                                    <label class="form-label small fw-semibold">Corporate Email Address *</label>
+                                    <input type="email" class="form-control" required placeholder="tariq@institution.com">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Organization / Entity</label>
-                                    <input type="text" class="form-control" placeholder="e.g. Apex Holdings">
+                                    <label class="form-label small fw-semibold">Organization / Company</label>
+                                    <input type="text" class="form-control" placeholder="Company Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Division of Interest</label>
+                                    <label class="form-label small fw-semibold">Subsidiary of Interest</label>
                                     <select class="form-select">
-                                        <option value="giga-soft">Giga Soft Limited — Cloud ERP &amp; FinTech</option>
-                                        <option value="giga-digital">Giga Digital Agency — Media &amp; Advertising</option>
-                                        <option value="krishi-beez">Krishi Beez Bank — Agriculture &amp; Seeds</option>
-                                        <option value="rider">Rider Service Limited — Logistics &amp; Fleet</option>
-                                        <option value="pc-care">PC Care &amp; Engineering — IT Hardware</option>
-                                        <option value="other">General Corporate Affairs</option>
+                                        <option value="group">Giga Group (Corporate General)</option>
+                                        <option value="soft">Giga Soft Limited</option>
+                                        <option value="agency">Giga Digital Agency</option>
+                                        <option value="pccare">PC Care &amp; Engineering</option>
+                                        <option value="food">Giga Food Limited</option>
+                                        <option value="kbb">Krishi Beez Bank</option>
+                                        <option value="enterprise">Giga Enterprise</option>
+                                        <option value="rider">Rider Service Limited</option>
+                                        <option value="tender">Tender Barta</option>
+                                        <option value="shop">Giga Shop Limited</option>
+                                        <option value="foundation">Giga Foundation</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Project Scope &amp; Requirements *</label>
-                                    <textarea class="form-control" rows="4" placeholder="Detail your project timeline, requirements, and inquiry..." required></textarea>
+                                    <label class="form-label small fw-semibold">Message &amp; Inquiry Scope *</label>
+                                    <textarea class="form-control" rows="4" required placeholder="Detail your project scope, partnership proposal, or corporate query..."></textarea>
                                 </div>
-                                <div class="col-12 mt-4">
-                                    <button type="submit" class="amx-btn-primary w-100 justify-content-center py-3">
-                                        Submit Enterprise Inquiry <i class="ri-arrow-right-line"></i>
-                                    </button>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-danger btn-lg w-100 fw-bold">Send Corporate Inquiry &rarr;</button>
                                 </div>
                             </div>
                         </form>
@@ -630,154 +978,101 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section End -->
 
+    
+    <footer class="flex_container footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <!-- Col 1: Left - Brand & About -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-brand-box">
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <img src='assets/images/logo/logo.png' alt="Giga Group" class="footer-logo">
+                        </a>
+                        <p class="sub_title text-muted small pe-lg-4 mb-4">
+                            Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
+                        </p>
+                        
+                        <div class="social_icons d-flex gap-2">
+                            <a href="https://www.facebook.com/gigagroupbangladesh/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Facebook">
+                                <img src="assets/images/facebook.png" alt="Facebook" width="20">
+                            </a>
+                            <a href="https://giga-soft-bd.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Giga Soft Limited">
+                                <img src="assets/images/linkedin.png" alt="LinkedIn" width="20">
+                            </a>
+                            <a href="https://giga-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Giga Digital Agency">
+                                <img src="assets/images/instragram.png" alt="Instagram" width="20">
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Modern Aminex Footer -->
-    <footer class="amx-footer">
-      <div class="container">
-        <div class="row g-4 mb-5">
-          <div class="col-lg-4 col-md-6">
-            <img src="assets/images/logo.png" alt="Giga Group" class="mb-3" style="height: 48px;">
-            <p class="text-secondary small mb-4" style="line-height: 1.7;">
-              Giga Group of Bangladesh is a premier multi-sector industrial and digital conglomerate. Operating across enterprise software, digital creative media, agriculture, seed banking, and nationwide logistics.
-            </p>
-            <div class="d-flex gap-2">
-              <a href="https://facebook.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-facebook-fill"></i></a>
-              <a href="https://linkedin.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-linkedin-fill"></i></a>
-              <a href="https://twitter.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-twitter-x-line"></i></a>
-              <a href="https://youtube.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-youtube-fill"></i></a>
+                <!-- Col 2: Center - Sister Concerns Directory -->
+                <div class="col-lg-5 col-md-7">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li class="mb-2"><a href="giga-soft.html" class="text-danger fw-bold">Giga Soft Limited ↗</a></li>
+                                <li class="mb-2"><a href="giga-digital-agency.html" class="text-danger fw-bold">Giga Digital Agency ↗</a></li>
+                                <li class="mb-2"><a href="pc-care.html">PC Care &amp; Engineering</a></li>
+                                <li class="mb-2"><a href="giga-food.html">Giga Food Limited</a></li>
+                                <li class="mb-2"><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li class="mb-2"><a href="giga-enterprise.html">Giga Enterprise</a></li>
+                                <li class="mb-2"><a href="rider-service.html">Rider Service Limited</a></li>
+                                <li class="mb-2"><a href="tender-barta.html">Tender Barta</a></li>
+                                <li class="mb-2"><a href="giga-shop.html">Giga Shop Limited</a></li>
+                                <li class="mb-2"><a href="giga-foundation.html">Giga Foundation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Right - Corporate Coordinates -->
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Corporate Headquarters</h5>
+                    <ul class="list-unstyled footer-contact-list small text-muted">
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Central Address:</strong>
+                            46, Kazi Nazrul Islam Avenue, Kawran Bazar, Dhaka-1215, Bangladesh.
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Telephone Hotlines:</strong>
+                            <a href="tel:+8801778741894" class="text-decoration-none text-muted">+88-01778-741894</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white d-block mb-1">Official Email Desk:</strong>
+                            <a href="mailto:gigagroupbd@gmail.com" class="text-decoration-none text-muted">gigagroupbd@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
 
-          <div class="col-lg-2 col-md-6 col-6">
-            <div class="amx-footer-title">Navigation</div>
-            <ul class="amx-footer-links">
-              <li><a href="index.html">Corporate Home</a></li>
-              <li><a href="services.html">Enterprise Services</a></li>
-              <li><a href="projects.html">Completed Projects</a></li>
-              <li><a href="index.html#about_us">Corporate Overview</a></li>
-              <li><a href="index.html#leadership">Executive Leadership</a></li>
-              <li><a href="index.html#consultation">Contact &amp; Inquiries</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="amx-footer-title">Operating Entities</div>
-            <ul class="amx-footer-links">
-              <li><a href="giga-soft.html">Giga Soft Limited</a></li>
-              <li><a href="giga-digital-agency.html">Giga Digital Agency</a></li>
-              <li><a href="pc-care.html">PC Care &amp; Engineering</a></li>
-              <li><a href="giga-food.html">Giga Food Limited</a></li>
-              <li><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
-              <li><a href="rider-service.html">Rider Service Logistics</a></li>
-              <li><a href="tender-barta.html">Tender Barta E-Procurement</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="amx-footer-title">Corporate Headquarters</div>
-            <p class="text-secondary small mb-2"><i class="ri-map-pin-2-line text-danger me-2"></i> TCB Bhaban, Kawran Bazar C/A, Dhaka-1215, Bangladesh</p>
-            <p class="text-secondary small mb-2"><i class="ri-phone-line text-danger me-2"></i> +88-02-223310826 / +880 1912 000000</p>
-            <p class="text-secondary small mb-3"><i class="ri-mail-line text-danger me-2"></i> info@gigagroup.com.bd</p>
-            <div class="p-3 rounded-3" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
-              <span class="d-block small fw-bold text-danger mb-1">Corporate Hours</span>
-              <span class="small text-muted">Sun - Thu: 09:00 AM - 06:00 PM (BST)</span>
+            <div class="footer-bottom-bar border-top pt-3 mt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p class="copyright text-muted small mb-0">
+                            &copy; 2024 Giga Group of Bangladesh. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small text-muted mb-0">
+                            Leadership: <span class="fw-bold text-white">Md. Ashikur Rahman</span> (Chairman &amp; Managing Director)
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="amx-footer-bottom">
-          <div>
-            &copy; 2026 Giga Group of Bangladesh. All rights reserved.
-          </div>
-          <div class="d-flex gap-3">
-            <a href="services.html" class="text-muted text-decoration-none">Services</a>
-            <a href="projects.html" class="text-muted text-decoration-none">Projects</a>
-            <a href="index.html#consultation" class="text-muted text-decoration-none">Privacy &amp; Terms</a>
-          </div>
-        </div>
-      </div>
     </footer>
-  
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true, offset: 50 });
-      
-      // Theme Toggle Logic
-      function applyTheme(theme) {
-        if (theme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.body.classList.add('light-theme');
-          var icon = document.getElementById('themeIcon');
-          if (icon) icon.className = 'ri-sun-line';
-          localStorage.setItem('giga_theme', 'light');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.body.classList.remove('light-theme');
-          var icon = document.getElementById('themeIcon');
-          if (icon) icon.className = 'ri-moon-line';
-          localStorage.setItem('giga_theme', 'dark');
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var currentTheme = localStorage.getItem('giga_theme') || 'dark';
-        applyTheme(currentTheme);
-        
-        var toggleBtn = document.getElementById('themeToggleBtn');
-        if (toggleBtn) {
-          toggleBtn.addEventListener('click', function() {
-            var active = localStorage.getItem('giga_theme') || 'dark';
-            applyTheme(active === 'dark' ? 'light' : 'dark');
-          });
-        }
-        
-        // Live counter animation
-        function animateCounter(el) {
-          if (el.dataset.animated === 'true') return;
-          el.dataset.animated = 'true';
-          var target = parseFloat(el.getAttribute('data-target')) || 0;
-          var suffix = el.getAttribute('data-suffix') || '';
-          var decimals = parseInt(el.getAttribute('data-decimals')) || 0;
-          var duration = 1600;
-          var start = 0;
-          var startTime = null;
-
-          function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = Math.min((timestamp - startTime) / duration, 1);
-            var currentVal = progress * (target - start) + start;
-            if (decimals > 0) {
-              el.textContent = currentVal.toFixed(decimals) + suffix;
-            } else {
-              el.textContent = Math.floor(currentVal) + suffix;
-            }
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              el.textContent = (decimals > 0 ? target.toFixed(decimals) : target) + suffix;
-            }
-          }
-          requestAnimationFrame(step);
-        }
-
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              animateCounter(entry.target);
-            }
-          });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll('.live-counter').forEach(function(counter) {
-          observer.observe(counter);
-        });
-      });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
-

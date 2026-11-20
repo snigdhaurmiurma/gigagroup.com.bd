@@ -604,3 +604,176 @@ footer.footer a.text-danger:hover {
   height: 25px;
   background: transparent;
 }
+
+/* ==========================================================================
+   CLIENT & PARTNER MARQUEE STRIP (Aminex-style Partner Showcase)
+   ========================================================================== */
+.client-strip {
+  background: var(--card-bg, #0b1320);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 34px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+body.light-theme .client-strip,
+[data-theme="light"] .client-strip {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.client-strip-title {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 22px;
+}
+body.light-theme .client-strip-title,
+[data-theme="light"] .client-strip-title {
+  color: #64748b;
+}
+.client-marquee-wrapper {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.client-marquee-wrapper::before,
+.client-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.client-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--card-bg, #0b1320), transparent);
+}
+.client-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--card-bg, #0b1320), transparent);
+}
+body.light-theme .client-marquee-wrapper::before,
+[data-theme="light"] .client-marquee-wrapper::before {
+  background: linear-gradient(to right, #f8fafc, transparent);
+}
+body.light-theme .client-marquee-wrapper::after,
+[data-theme="light"] .client-marquee-wrapper::after {
+  background: linear-gradient(to left, #f8fafc, transparent);
+}
+.client-logo-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: amxMarquee 26s linear infinite;
+}
+.client-logo-slider:hover {
+  animation-play-state: paused;
+}
+@keyframes amxMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.client-card {
+  min-width: 190px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #f1f5f9;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+body.light-theme .client-card,
+[data-theme="light"] .client-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+.client-card:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.18);
+}
+
+/* ==========================================================================
+   REFINED CARD & PICTURE SIZING (Modern Proportions)
+   ========================================================================== */
+.service-card-item {
+  min-height: 440px;
+  border-radius: 20px !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.service-card-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15) !important;
+  border-color: #ef4444 !important;
+}
+.company-logo-wrap {
+  width: 140px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.company-logo-wrap img {
+  max-height: 48px;
+  max-width: 120px;
+  object-fit: contain;
+}
+.about-visual-wrapper img {
+  border-radius: 20px !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25) !important;
+}
+
+.company-stat-card {
+  background: var(--card-bg, #0f172a);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.company-stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #ef4444;
+  box-shadow: 0 15px 35px rgba(239, 68, 68, 0.15);
+}
+.company-stat-card .stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ef4444;
+  margin-bottom: 6px;
+}
+.company-stat-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted, #94a3b8);
+  margin: 0;
+}
+body.light-theme .company-stat-card,
+[data-theme="light"] .company-stat-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+body.light-theme .company-stat-card p,
+[data-theme="light"] .company-stat-card p {
+  color: #64748b;
+}
