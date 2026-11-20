@@ -594,6 +594,69 @@ footer.footer a.text-danger:hover {
   z-index: 10;
 }
 
+/* ==========================================================================
+   STRICT SINGLE-LINE NAVBAR (Never wrap to 2nd line)
+   ========================================================================== */
+.header_container .container,
+.header_container .container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.navbar .nav-link,
+.navbar-nav .nav-link,
+.nav-menu-list .nav-link {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow: visible !important;
+  padding: 8px 10px !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em;
+}
+
+.navbar-nav,
+.nav-menu-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.navbar-nav .nav-item {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.navbar-brand {
+  flex-shrink: 0 !important;
+  margin-right: 16px !important;
+}
+
+.theme-toggle-btn {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  margin-left: 8px !important;
+}
+
+.social_btns {
+  flex-shrink: 0 !important;
+  gap: 6px !important;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .navbar .nav-link,
+  .navbar-nav .nav-link,
+  .nav-menu-list .nav-link {
+    font-size: 13.5px !important;
+    padding: 6px 7px !important;
+  }
+  .navbar-brand img {
+    max-height: 38px !important;
+  }
+}
+
 /* Seamless Dropdown Bridge to prevent hover loss */
 .navbar .mega-menu-content::before {
   content: "";

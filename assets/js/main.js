@@ -152,90 +152,107 @@ $(document).ready(function () {
   // ----------- accordion toggle end here -----------
 
   //----------- swiper slider start here -----------
-  const thumb = new Swiper('.thumb_slider', {
-    loop: true,
-    spaceBetween: 40,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      // when window width is >= 700px
-      700: {
-        slidesPerView: 2,
-      },
-      // when window width is >= 900px
-      992: {
-        slidesPerView: 3,
-      },
-      // when window width is >= 1300px
-      1300: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  const swiper2 = new Swiper('.mySwiper2', {
-    loop: true,
-    spaceBetween: 10,
-    speed: 1000,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-      swiper: thumb,
-    },
-  });
-  //----------- swiper slider end here -----------
-
-  //----------- Theme Switcher (Dark / Light Mode) -----------
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('.theme-icon') : null;
-  const themeLabel = themeToggleBtn ? themeToggleBtn.querySelector('.theme-label') : null;
-
-  function updateThemeUI(theme) {
-    if (!themeToggleBtn) return;
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      if (themeIcon) themeIcon.textContent = '☀️';
-      if (themeLabel) themeLabel.textContent = 'Light';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      if (themeIcon) themeIcon.textContent = '🌙';
-      if (themeLabel) themeLabel.textContent = 'Dark';
-    }
-  }
-
-  // Initial theme check
-  const savedTheme = localStorage.getItem('giga_theme') || 
-    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  updateThemeUI(savedTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', function () {
-      const current = document.documentElement.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('giga_theme', next);
-      updateThemeUI(next);
+  if (typeof Swiper !== 'undefined' && $('.thumb_slider').length > 0) {
+    const thumb = new Swiper('.thumb_slider', {
+      loop: true,
+      spaceBetween: 40,
+      slidesPerView: 1,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        700: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1300: { slidesPerView: 4 }
+      }
+    });
+    const swiper2 = new Swiper('.mySwiper2', {
+      loop: true,
+      spaceBetween: 10,
+      speed: 1000,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      thumbs: { swiper: thumb }
     });
   }
+  //----------- swiper slider end here -----------
 
-  //----------- Company Category Filter -----------
-  $('.company-filter-btn').on('click', function () {
-    $('.company-filter-btn').removeClass('active');
-    $(this).addClass('active');
-
-    const filter = $(this).attr('data-filter');
-    if (filter === 'all') {
-      $('.company-item').fadeIn(300);
-    } else {
-      $('.company-item').hide();
-      $('.company-item[data-category="' + filter + '"]').fadeIn(300);
+  //----------- Robust Theme Switcher (Dark / Light Mode) -----------
+  window.toggleTheme = function () {
+    var html = document.documentElement;
+    var currentTheme = html.getAttribute('data-theme') || localStorage.getItem('giga_theme') || 'dark';
+    var newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(newTheme + '-theme');
+    localStorage.setItem('giga_theme', newTheme);
+    
+    // Update theme button labels and icons across desktop & mobile
+    var desktopBtn = document.getElementById('themeToggleBtn');
+    var mobileBtn = document.getElementById('mobileThemeToggleBtn');
+    
+    if (desktopBtn) {
+      var icon = desktopBtn.querySelector('.theme-icon');
+      var label = desktopBtn.querySelector('.theme-label');
+      if (newTheme === 'dark') {
+        if (icon) icon.textContent = '🌙';
+        if (label) label.textContent = 'Dark';
+      } else {
+        if (icon) icon.textContent = '☀️';
+        if (label) label.textContent = 'Light';
+      }
     }
-  });
+    if (mobileBtn) {
+      var mobIcon = mobileBtn.querySelector('.theme-icon');
+      if (mobIcon) {
+        mobIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+      }
+    }
+  };
+
+  // Sync button state on initial load
+  (function initThemeUI() {
+    var activeTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('giga_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', activeTheme);
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(activeTheme + '-theme');
+    
+    var desktopBtn = document.getElementById('themeToggleBtn');
+    var mobileBtn = document.getElementById('mobileThemeToggleBtn');
+    if (desktopBtn) {
+      var icon = desktopBtn.querySelector('.theme-icon');
+      var label = desktopBtn.querySelector('.theme-label');
+      if (activeTheme === 'dark') {
+        if (icon) icon.textContent = '🌙';
+        if (label) label.textContent = 'Dark';
+      } else {
+        if (icon) icon.textContent = '☀️';
+        if (label) label.textContent = 'Light';
+      }
+    }
+    if (mobileBtn) {
+      var mobIcon = mobileBtn.querySelector('.theme-icon');
+      if (mobIcon) {
+        mobIcon.textContent = (activeTheme === 'dark') ? '🌙' : '☀️';
+      }
+    }
+  })();
+
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const mobileThemeToggleBtn = document.getElementById('mobileThemeToggleBtn');
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.toggleTheme();
+    });
+  }
+  if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.toggleTheme();
+    });
+  }
 
   // Smooth scroll for in-page anchors
   $('a[href^="#"]').on('click', function (e) {

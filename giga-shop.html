@@ -10,17 +10,40 @@
     
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
     
+    <!-- Instant Theme Initializer & Global Handler -->
     <script>
       (function() {
-        var savedTheme = localStorage.getItem('giga_theme');
-        if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          savedTheme = 'dark';
-        }
-        if (savedTheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
+        var savedTheme = localStorage.getItem('giga_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        window.toggleTheme = function() {
+          var html = document.documentElement;
+          var cur = html.getAttribute('data-theme') || 'dark';
+          var next = (cur === 'dark') ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          if (document.body) {
+            document.body.classList.remove('dark-theme', 'light-theme');
+            document.body.classList.add(next + '-theme');
+          }
+          localStorage.setItem('giga_theme', next);
+          
+          var dBtn = document.getElementById('themeToggleBtn');
+          var mBtn = document.getElementById('mobileThemeToggleBtn');
+          if (dBtn) {
+            var icon = dBtn.querySelector('.theme-icon');
+            var label = dBtn.querySelector('.theme-label');
+            if (next === 'dark') {
+              if (icon) icon.textContent = '🌙';
+              if (label) label.textContent = 'Dark';
+            } else {
+              if (icon) icon.textContent = '☀️';
+              if (label) label.textContent = 'Light';
+            }
+          }
+          if (mBtn) {
+            var mIcon = mBtn.querySelector('.theme-icon');
+            if (mIcon) mIcon.textContent = (next === 'dark') ? '🌙' : '☀️';
+          }
+        };
       })();
     </script>
     
@@ -34,7 +57,7 @@
 <body>
     <!-- Header Start -->
     <header class="flex_container header_container bg-white shadow-sm sticky-top">
-        <div class="container padding_0">
+        <div class="container-fluid px-xl-4 px-2 padding_0">
             <nav class="navbar navbar-expand-xl navbar-light bg-light py-2">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
