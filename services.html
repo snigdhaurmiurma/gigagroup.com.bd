@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Services & Solutions | Giga Group Bangladesh</title>
+    <meta name="description" content="Explore integrated enterprise services from Giga Group across cloud software, digital media, agri-tech, and logistics.">
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+    <!-- Pre-load Dark Theme Script -->
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('giga_theme');
+        if (savedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+    <!-- Remix Icon & Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    
+    <!-- Aminex-Style Design System CSS -->
+    <link rel="stylesheet" href="assets/css/aminex-style.css">
+    <link rel="stylesheet" href="assets/css/company-pages.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body>
+
+
+
+    <!-- Top Announcement Bar -->
+    <div class="amx-topbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>
+          <span><i class="ri-map-pin-line me-1 text-danger"></i> Kawran Bazar, Dhaka-1215, Bangladesh</span>
+          <span class="ms-3 d-none d-md-inline"><i class="ri-phone-line me-1 text-danger"></i> +88-02-223310826</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="mailto:info@gigagroup.com.bd"><i class="ri-mail-line me-1"></i> info@gigagroup.com.bd</a>
+          <span class="d-none d-sm-inline">|</span>
+          <span class="badge bg-danger-subtle text-danger fw-semibold d-none d-sm-inline">10 Operating Entities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="amx-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="amx-nav-brand d-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/images/logo.png" alt="Giga Group Logo">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="d-none d-lg-block">
+          <ul class="amx-nav-links">
+            <li><a href="index.html" class="amx-nav-link ">Home</a></li>
+            <li><a href="services.html" class="amx-nav-link active">Services</a></li>
+            <li><a href="projects.html" class="amx-nav-link ">Projects</a></li>
+            
+            <!-- Aminex-inspired Mega Dropdown -->
+            <li class="amx-dropdown">
+              <span class="amx-nav-link amx-dropdown-toggle ">
+                Our Companies <i class="ri-arrow-down-s-line"></i>
+              </span>
+              <div class="amx-dropdown-menu">
+                <div class="amx-menu-grid">
+                  <div>
+                    <div class="amx-menu-cat-title">Technology &amp; Software</div>
+                    <a href="giga-soft.html" class="amx-menu-item">Giga Soft Limited &rarr;</a>
+                    <a href="pc-care.html" class="amx-menu-item">PC Care &amp; Engineering &rarr;</a>
+                    <a href="tender-barta.html" class="amx-menu-item">Tender Barta &rarr;</a>
+                  </div>
+                  <div>
+                    <div class="amx-menu-cat-title">Media, Food &amp; Agri</div>
+                    <a href="giga-digital-agency.html" class="amx-menu-item">Giga Digital Agency &rarr;</a>
+                    <a href="giga-food.html" class="amx-menu-item">Giga Food Limited &rarr;</a>
+                    <a href="krishi-beez-bank.html" class="amx-menu-item">Krishi Beez Bank &rarr;</a>
+                  </div>
+                  <div>
+                    <div class="amx-menu-cat-title">Logistics &amp; Foundation</div>
+                    <a href="giga-enterprise.html" class="amx-menu-item">Giga Enterprise &rarr;</a>
+                    <a href="rider-service.html" class="amx-menu-item">Rider Service Limited &rarr;</a>
+                    <a href="giga-shop.html" class="amx-menu-item">Giga Shop Limited &rarr;</a>
+                    <a href="giga-foundation.html" class="amx-menu-item">Giga Foundation (CSR) &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li><a href="index.html#about_us" class="amx-nav-link">About Us</a></li>
+            <li><a href="index.html#consultation" class="amx-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="amx-nav-actions">
+          <button class="amx-theme-toggle" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+            <i class="ri-moon-line" id="themeIcon"></i>
+          </button>
+          <a href="index.html#consultation" class="amx-btn-primary d-none d-sm-inline-flex">
+            Discuss Project <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+  
+
+    <!-- Services Hero Banner with Breadcrumbs -->
+    <section class="py-5 watermark-section" style="background: var(--amx-bg-surface); border-bottom: 1px solid var(--amx-border);">
+        <div class="watermark-bg-text">SERVICES</div>
+        <div class="container position-relative py-4" style="z-index: 1;">
+            <div class="product-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span class="current">Services</span>
+            </div>
+
+            <div class="max-w-750" data-aos="fade-up">
+                <span class="aminex-eyebrow">INTEGRATED COMMERCIAL CAPABILITIES</span>
+                <h1 class="display-5 fw-bold mb-3">Enterprise Solutions for Modern Industry &amp; Digital Infrastructure</h1>
+                <p class="lead text-secondary">
+                    Giga Group provides full-lifecycle engineering, media production, precision agricultural supply, and logistics services designed to accelerate corporate efficiency and institutional capacity across Bangladesh.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#consultation" class="amx-btn-primary">Request Service Proposal <i class="ri-arrow-right-line"></i></a>
+                    <a href="projects.html" class="amx-btn-dark">View Completed Projects ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Core Disciplines Quick Selector -->
+    <section class="py-5" style="background: var(--amx-bg);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#tech" class="text-decoration-none">
+                        <div class="p-4 rounded-4 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border); transition: all 0.3s ease;">
+                            <div class="process-icon mb-3"><i class="ri-code-s-slash-line"></i></div>
+                            <h5 class="fw-bold text-white mb-2">Technology &amp; Software</h5>
+                            <p class="small text-muted mb-0">Cloud ERP, FinTech Banking, API Gateways, and IT Engineering.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#media" class="text-decoration-none">
+                        <div class="p-4 rounded-4 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border); transition: all 0.3s ease;">
+                            <div class="process-icon mb-3"><i class="ri-palette-line"></i></div>
+                            <h5 class="fw-bold text-white mb-2">Creative &amp; Media</h5>
+                            <p class="small text-muted mb-0">Brand Strategy, TVC Commercials, Digital Performance Ads, and UI/UX.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#agri" class="text-decoration-none">
+                        <div class="p-4 rounded-4 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border); transition: all 0.3s ease;">
+                            <div class="process-icon mb-3"><i class="ri-plant-line"></i></div>
+                            <h5 class="fw-bold text-white mb-2">Agri-Tech &amp; Food</h5>
+                            <p class="small text-muted mb-0">Climate Seeds, Agricultural Cold Chain, Nutrition &amp; Hygienic Packing.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#logistics" class="text-decoration-none">
+                        <div class="p-4 rounded-4 h-100" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border); transition: all 0.3s ease;">
+                            <div class="process-icon mb-3"><i class="ri-truck-line"></i></div>
+                            <h5 class="fw-bold text-white mb-2">Logistics &amp; Commerce</h5>
+                            <p class="small text-muted mb-0">64-District Courier, GPS Fleet Telematics, and B2B E-Tendering.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: TECHNOLOGY & SOFTWARE SERVICES -->
+    <section class="py-5 watermark-section" id="tech" style="background: var(--amx-bg-surface); border-bottom: 1px solid var(--amx-border);">
+        <div class="watermark-bg-text">TECH</div>
+        <div class="container position-relative py-4" style="z-index: 1;">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5" data-aos="fade-up">
+                <div>
+                    <span class="aminex-eyebrow">DIVISION 01</span>
+                    <h2 class="display-6 fw-bold mb-2">Technology, Software &amp; IT Engineering</h2>
+                    <p class="text-secondary mb-0">Delivered via Giga Soft Limited and PC Care &amp; Engineering Limited.</p>
+                </div>
+                <a href="giga-soft.html" class="amx-btn-primary">Visit Giga Soft Portal &rarr;</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-1.jpg');">
+                            <span class="aminex-card-number">01</span>
+                            <span class="aminex-card-icon"><i class="ri-cloud-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>Enterprise Cloud ERP</h3>
+                            <p>Integrated resource planning covering multi-entity general ledger, supply chain, automated payroll, inventory management, and executive analytics.</p>
+                            <a href="project-banking-erp.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-2.jpg');">
+                            <span class="aminex-card-number">02</span>
+                            <span class="aminex-card-icon"><i class="ri-bank-card-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>FinTech &amp; Core Banking</h3>
+                            <p>High-throughput payment switch software, mobile financial services (MFS) integration, micro-lending algorithms, and central bank compliance.</p>
+                            <a href="project-fintech-switch.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/project-5.jpg');">
+                            <span class="aminex-card-number">03</span>
+                            <span class="aminex-card-icon"><i class="ri-server-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>Data Center &amp; IT Hardware AMC</h3>
+                            <p>Tier-3 server deployment, enterprise network security, SAN storage provisioning, structured cabling, and 24/7 onsite AMC engineering.</p>
+                            <a href="project-datacenter.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CREATIVE & DIGITAL MEDIA -->
+    <section class="py-5 watermark-section" id="media" style="background: var(--amx-bg); border-bottom: 1px solid var(--amx-border);">
+        <div class="watermark-bg-text">MEDIA</div>
+        <div class="container position-relative py-4" style="z-index: 1;">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5" data-aos="fade-up">
+                <div>
+                    <span class="aminex-eyebrow">DIVISION 02</span>
+                    <h2 class="display-6 fw-bold mb-2">Creative Production &amp; Digital Media</h2>
+                    <p class="text-secondary mb-0">Delivered via Giga Digital Agency.</p>
+                </div>
+                <a href="giga-digital-agency.html" class="amx-btn-primary">Visit Digital Agency Portal &rarr;</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-2.jpg');">
+                            <span class="aminex-card-number">04</span>
+                            <span class="aminex-card-icon"><i class="ri-movie-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>360° Commercial &amp; Video Production</h3>
+                            <p>High-concept television commercials, corporate documentaries, product 3D animations, and cinema-grade digital content.</p>
+                            <a href="project-digital-campaign.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-3.jpg');">
+                            <span class="aminex-card-number">05</span>
+                            <span class="aminex-card-icon"><i class="ri-layout-masonry-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>UI/UX &amp; Design Systems</h3>
+                            <p>Human-centered interface design for web apps, iOS/Android platforms, enterprise dashboards, and multi-brand corporate design tokens.</p>
+                            <a href="giga-digital-agency.html#portfolio">Explore Portfolio ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/portfolio-item-4.jpg');">
+                            <span class="aminex-card-number">06</span>
+                            <span class="aminex-card-icon"><i class="ri-line-chart-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>Performance Digital Marketing</h3>
+                            <p>Data-driven audience acquisition, programmatic ad buying, SEO strategy, and conversion rate optimization (CRO) across Bangladesh.</p>
+                            <a href="giga-digital-agency.html">Explore Solutions ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: AGRI-TECH & LOGISTICS -->
+    <section class="py-5 watermark-section" id="agri" style="background: var(--amx-bg-surface); border-bottom: 1px solid var(--amx-border);">
+        <div class="watermark-bg-text">AGRI &amp; LOGISTICS</div>
+        <div class="container position-relative py-4" style="z-index: 1;">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5" data-aos="fade-up">
+                <div>
+                    <span class="aminex-eyebrow">DIVISIONS 03 &amp; 04</span>
+                    <h2 class="display-6 fw-bold mb-2">Agri-Tech, Food Security &amp; Nationwide Logistics</h2>
+                    <p class="text-secondary mb-0">Delivered via Krishi Beez Bank, Giga Food, and Rider Service Limited.</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="krishi-beez-bank.html" class="amx-btn-dark">Krishi Beez</a>
+                    <a href="rider-service.html" class="amx-btn-primary">Rider Service</a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/project-3.jpg'); height: 230px;">
+                            <span class="aminex-card-number">07</span>
+                            <span class="aminex-card-icon"><i class="ri-seedling-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>Climate-Resilient Seed Banking</h3>
+                            <p>Certified hybrid seeds tested for drought, salinity, and waterlogging resistance. Complete farmer guidance and cold-chain storage network.</p>
+                            <a href="project-krishi-network.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aminex-core-card h-100">
+                        <div class="aminex-core-card-img" style="background-image: url('assets/images/projects/project-4.jpg'); height: 230px;">
+                            <span class="aminex-card-number">08</span>
+                            <span class="aminex-card-icon"><i class="ri-truck-line"></i></span>
+                        </div>
+                        <div class="aminex-core-card-body">
+                            <h3>64-District Express Fleet Logistics</h3>
+                            <p>Next-day urban parcel delivery, refrigerated inter-district perishables transport, automated sorting hubs, and real-time GPS telematics tracking.</p>
+                            <a href="project-nationwide-logistics.html">Explore Case Study ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUALITY INDICATORS & METRICS -->
+    <section class="py-5" style="background: var(--amx-bg);">
+        <div class="container py-4 text-center">
+            <span class="aminex-eyebrow">QUALITY &amp; SCALE</span>
+            <h2 class="display-6 fw-bold mb-4">Enterprise Reliability by the Numbers</h2>
+            
+            <div class="row g-4 mt-2">
+                <div class="col-6 col-md-3">
+                    <div class="p-4 rounded-4" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
+                        <h2 class="display-5 fw-bold text-danger mb-1 live-counter" data-target="10" data-suffix="+">10+</h2>
+                        <span class="small text-muted fw-semibold">Operating Entities</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 rounded-4" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
+                        <h2 class="display-5 fw-bold text-danger mb-1 live-counter" data-target="64">64</h2>
+                        <span class="small text-muted fw-semibold">Districts Served</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 rounded-4" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
+                        <h2 class="display-5 fw-bold text-danger mb-1 live-counter" data-target="500" data-suffix="+">500+</h2>
+                        <span class="small text-muted fw-semibold">Enterprise Workforce</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 rounded-4" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
+                        <h2 class="display-5 fw-bold text-danger mb-1 live-counter" data-target="99.99" data-decimals="2" data-suffix="%">99.99%</h2>
+                        <span class="small text-muted fw-semibold">Cloud Infrastructure SLA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modern Aminex Footer -->
+    <footer class="amx-footer">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <img src="assets/images/logo.png" alt="Giga Group" class="mb-3" style="height: 48px;">
+            <p class="text-secondary small mb-4" style="line-height: 1.7;">
+              Giga Group of Bangladesh is a premier multi-sector industrial and digital conglomerate. Operating across enterprise software, digital creative media, agriculture, seed banking, and nationwide logistics.
+            </p>
+            <div class="d-flex gap-2">
+              <a href="https://facebook.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-facebook-fill"></i></a>
+              <a href="https://linkedin.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://twitter.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-twitter-x-line"></i></a>
+              <a href="https://youtube.com" target="_blank" class="amx-theme-toggle text-decoration-none"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="amx-footer-title">Navigation</div>
+            <ul class="amx-footer-links">
+              <li><a href="index.html">Corporate Home</a></li>
+              <li><a href="services.html">Enterprise Services</a></li>
+              <li><a href="projects.html">Completed Projects</a></li>
+              <li><a href="index.html#about_us">Corporate Overview</a></li>
+              <li><a href="index.html#leadership">Executive Leadership</a></li>
+              <li><a href="index.html#consultation">Contact &amp; Inquiries</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="amx-footer-title">Operating Entities</div>
+            <ul class="amx-footer-links">
+              <li><a href="giga-soft.html">Giga Soft Limited</a></li>
+              <li><a href="giga-digital-agency.html">Giga Digital Agency</a></li>
+              <li><a href="pc-care.html">PC Care &amp; Engineering</a></li>
+              <li><a href="giga-food.html">Giga Food Limited</a></li>
+              <li><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
+              <li><a href="rider-service.html">Rider Service Logistics</a></li>
+              <li><a href="tender-barta.html">Tender Barta E-Procurement</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="amx-footer-title">Corporate Headquarters</div>
+            <p class="text-secondary small mb-2"><i class="ri-map-pin-2-line text-danger me-2"></i> TCB Bhaban, Kawran Bazar C/A, Dhaka-1215, Bangladesh</p>
+            <p class="text-secondary small mb-2"><i class="ri-phone-line text-danger me-2"></i> +88-02-223310826 / +880 1912 000000</p>
+            <p class="text-secondary small mb-3"><i class="ri-mail-line text-danger me-2"></i> info@gigagroup.com.bd</p>
+            <div class="p-3 rounded-3" style="background: var(--amx-bg-card); border: 1px solid var(--amx-border);">
+              <span class="d-block small fw-bold text-danger mb-1">Corporate Hours</span>
+              <span class="small text-muted">Sun - Thu: 09:00 AM - 06:00 PM (BST)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="amx-footer-bottom">
+          <div>
+            &copy; 2026 Giga Group of Bangladesh. All rights reserved.
+          </div>
+          <div class="d-flex gap-3">
+            <a href="services.html" class="text-muted text-decoration-none">Services</a>
+            <a href="projects.html" class="text-muted text-decoration-none">Projects</a>
+            <a href="index.html#consultation" class="text-muted text-decoration-none">Privacy &amp; Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 50 });
+      
+      // Theme Toggle Logic
+      function applyTheme(theme) {
+        if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.body.classList.add('light-theme');
+          var icon = document.getElementById('themeIcon');
+          if (icon) icon.className = 'ri-sun-line';
+          localStorage.setItem('giga_theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.body.classList.remove('light-theme');
+          var icon = document.getElementById('themeIcon');
+          if (icon) icon.className = 'ri-moon-line';
+          localStorage.setItem('giga_theme', 'dark');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var currentTheme = localStorage.getItem('giga_theme') || 'dark';
+        applyTheme(currentTheme);
+        
+        var toggleBtn = document.getElementById('themeToggleBtn');
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', function() {
+            var active = localStorage.getItem('giga_theme') || 'dark';
+            applyTheme(active === 'dark' ? 'light' : 'dark');
+          });
+        }
+        
+        // Live counter animation
+        function animateCounter(el) {
+          if (el.dataset.animated === 'true') return;
+          el.dataset.animated = 'true';
+          var target = parseFloat(el.getAttribute('data-target')) || 0;
+          var suffix = el.getAttribute('data-suffix') || '';
+          var decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+          var duration = 1600;
+          var start = 0;
+          var startTime = null;
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            var currentVal = progress * (target - start) + start;
+            if (decimals > 0) {
+              el.textContent = currentVal.toFixed(decimals) + suffix;
+            } else {
+              el.textContent = Math.floor(currentVal) + suffix;
+            }
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = (decimals > 0 ? target.toFixed(decimals) : target) + suffix;
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.live-counter').forEach(function(counter) {
+          observer.observe(counter);
+        });
+      });
+    </script>
+</body>
+</html>
+
