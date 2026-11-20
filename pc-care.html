@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="PC Care & Engineering Limited, Giga Group, Bangladesh, Technology & Hardware">
+    <meta name="description" content="PC Care & Engineering Limited provides enterprise hardware solutions, corporate server deployments, chip-level diagnostics, and 24/7 SLA-backed annual maintenance contracts (AMC) across financial, industrial, and government sectors in Bangladesh.">
+    <title>PC Care & Engineering Limited | Giga Group of Bangladesh</title>
+    
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+    <!-- Pre-load Dark Theme Script -->
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('giga_theme');
+        if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          savedTheme = 'dark';
+        }
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/company-pages.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="flex_container header_container bg-white shadow-sm sticky-top">
+        <div class="container padding_0">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light py-2">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo/logo.png" alt="Giga Group" class="brand-logo-img">
+                    </a>
+                    
+                    <div class="d-flex align-items-center d-xl-none">
+                        <button class="theme-toggle-btn me-2" id="mobileThemeToggleBtn" aria-label="Toggle theme" onclick="document.getElementById('themeToggleBtn').click()">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav align-items-xl-center mx-auto my-2 my-lg-0 nav-menu-list">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about_us">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="index.html#our_companies" id="companiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Companies
+                                </a>
+                                <ul class="dropdown-menu shadow-lg border-0" aria-labelledby="companiesDropdown">
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Technology &amp; Software</h6></li>
+                                    <li><a class="dropdown-item " href="giga-soft.html">Giga Soft Limited </a></li>
+                                    <li><a class="dropdown-item active" href="pc-care.html">PC Care &amp; Engineering</a></li>
+                                    <li><a class="dropdown-item " href="tender-barta.html">Tender Barta</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Creative &amp; Media</h6></li>
+                                    <li><a class="dropdown-item " href="giga-digital-agency.html">Giga Digital Agency</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Food &amp; Agriculture</h6></li>
+                                    <li><a class="dropdown-item " href="giga-food.html">Giga Food Limited</a></li>
+                                    <li><a class="dropdown-item " href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">Logistics &amp; Commerce</h6></li>
+                                    <li><a class="dropdown-item " href="giga-enterprise.html">Giga Enterprise</a></li>
+                                    <li><a class="dropdown-item " href="rider-service.html">Rider Service Limited</a></li>
+                                    <li><a class="dropdown-item " href="giga-shop.html">Giga Shop Limited</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header text-uppercase fw-bold text-danger">CSR &amp; Impact</h6></li>
+                                    <li><a class="dropdown-item " href="giga-foundation.html">Giga Foundation</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#chairman_desk">Chairman's Desk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#case_studies">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#blogs">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#inquiry">Contact</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex align-items-center">
+                            <button class="theme-toggle-btn d-none d-xl-flex align-items-center me-3" id="themeToggleBtn" aria-label="Toggle theme">
+                                <span class="theme-icon me-1">🌙</span>
+                                <span class="theme-label">Dark</span>
+                            </button>
+                            <a href="index.html#our_companies" class="btn btn-outline-danger btn-sm fw-semibold">
+                                &larr; All Companies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero / Breadcrumb Section -->
+    <section class="company-hero-banner">
+        <div class="container">
+            <nav class="breadcrumb-nav mb-3" aria-label="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="mx-2">&rsaquo;</span>
+                <a href="index.html#our_companies">Our Companies</a>
+                <span class="mx-2">&rsaquo;</span>
+                <span>PC Care & Engineering Limited</span>
+            </nav>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="company-title-wrap">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <span class="badge bg-secondary text-white px-3 py-2 text-uppercase fw-bold">Technology & Hardware</span>
+                            <span class="badge bg-light text-dark border">Sister Concern of Giga Group</span>
+                        </div>
+                        <h1 class="display-5 mb-3">PC Care & Engineering Limited</h1>
+                        <p class="company-tagline lead mb-4">Mission-Critical IT Infrastructure, Hardware Maintenance & Data Center Solutions</p>
+                        
+                        <div class="d-flex flex-wrap gap-3">
+                            
+                            <a href="#inquiry" class="btn btn-outline-danger btn-lg px-4 py-2 fw-semibold">
+                                Business Inquiry &darr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center text-lg-end" data-aos="fade-left">
+                    <div class="company-logo-hero-wrap p-4 bg-white border rounded-4 shadow-sm d-inline-block">
+                        <img src="assets/images/pccare.png" alt="PC Care & Engineering Limited Logo" class="img-fluid" style="max-height: 140px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlights Row -->
+            <div class="row g-3 mt-4" data-aos="fade-up">
+                
+                    <div class="col-6 col-md-3">
+                        <div class="company-stat-card">
+                            <h3>350+</h3>
+                            <p>Corporate AMC Clients</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="company-stat-card">
+                            <h3>2 Hours</h3>
+                            <p>Emergency On-Site SLA</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="company-stat-card">
+                            <h3>64</h3>
+                            <p>Districts Supported</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="company-stat-card">
+                            <h3>15,000+</h3>
+                            <p>Hardware Assets Maintained</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Website View / Platform Showcase Section -->
+    <section class="py-5" id="website_view">
+        <div class="container">
+            <div class="content_header text-center mb-4" data-aos="fade-up">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Digital Presence &amp; Interface</span>
+                <h2 class="display-6 fw-bold">Live Portal Showcase</h2>
+                <p class="text-secondary mx-auto max-w-650">Experience the online systems and interface powering PC Care & Engineering Limited.</p>
+            </div>
+
+            
+                    <div class="browser-mockup-frame" data-aos="zoom-in">
+                        <div class="browser-header-bar">
+                            <div class="browser-dots">
+                                <span class="browser-dot red"></span>
+                                <span class="browser-dot yellow"></span>
+                                <span class="browser-dot green"></span>
+                            </div>
+                            <div class="browser-address-bar">
+                                <span>🔒</span>
+                                <span>https://portal.pccare.gigagroup.com.bd</span>
+                            </div>
+                            <div class="browser-actions">
+                                <span class="badge bg-success">Verified Active Concern</span>
+                            </div>
+                        </div>
+                        <div class="browser-viewport">
+                            <div class="mockup-fallback-view">
+                                <img src="assets/images/pccare.png" alt="PC Care & Engineering Limited Logo" class="img-fluid">
+                                <h3 class="fw-bold mb-2">PC Care & Engineering Limited</h3>
+                                <p class="text-muted max-w-500 mb-4">Mission-Critical IT Infrastructure, Hardware Maintenance & Data Center Solutions</p>
+                                <div class="d-flex gap-2">
+                                    <a href="#inquiry" class="btn btn-danger fw-bold">Submit Business Inquiry &rarr;</a>
+                                    <a href="index.html#our_companies" class="btn btn-outline-secondary fw-semibold">&larr; Back to Group Directory</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Detailed Solutions & Products Section -->
+    <section class="py-5 bg-light" id="solutions">
+        <div class="container">
+            <div class="content_header text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Products &amp; Capabilities</span>
+                <h2 class="display-6 fw-bold">Enterprise Solutions &amp; Offerings</h2>
+                <p class="text-secondary mx-auto max-w-650">Comprehensive services and technical solutions engineered by PC Care & Engineering Limited.</p>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">🖥️</div>
+                        <h4>Enterprise Server Deployments</h4>
+                        <p>Procurement, installation, and configuration of high-density rack servers, blade systems, SAN/NAS storage arrays, and redundant backup power.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">🔧</div>
+                        <h4>Annual Maintenance Contracts (AMC)</h4>
+                        <p>Proactive monthly preventative maintenance, 2-hour critical breakdown response, loaner hardware replacement, and guaranteed zero downtime SLAs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">🌐</div>
+                        <h4>Structured Cabling & Networking</h4>
+                        <p>Cat6/Cat6A fiber optic network deployment, server room rack organization, enterprise switching, and corporate Wi-Fi mesh systems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">🛡️</div>
+                        <h4>Cybersecurity & Firewall Setup</h4>
+                        <p>Configuration of Fortinet, Sophos, and Cisco hardware firewalls, VPN tunneling for branch offices, and intruder prevention systems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">⚡</div>
+                        <h4>Component & Chip-Level Repair</h4>
+                        <p>Specialized lab diagnostics for high-end server motherboards, industrial power supplies, medical hardware boards, and precision electronics.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-icon-wrap">💾</div>
+                        <h4>Disaster Recovery & Data Storage</h4>
+                        <p>Automated off-site backup synchronisation, RAID data recovery, tape archive systems, and ransomware-proof immutable storage setups.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack & Methodologies -->
+            <div class="p-4 bg-white border rounded-4 shadow-sm mt-5 text-center" data-aos="fade-up">
+                <h5 class="fw-bold mb-3">Core Technologies &amp; Industry Standards</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-light text-dark border p-2 px-3 fw-medium">Cisco Systems</span> <span class="badge bg-light text-dark border p-2 px-3 fw-medium">Dell EMC</span> <span class="badge bg-light text-dark border p-2 px-3 fw-medium">HP Enterprise</span> <span class="badge bg-light text-dark border p-2 px-3 fw-medium">Fortinet</span> <span class="badge bg-light text-dark border p-2 px-3 fw-medium">VMware</span> <span class="badge bg-light text-dark border p-2 px-3 fw-medium">MikroTik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inter-Company Navigation: Seamlessly Switch Between Sister Concerns -->
+    <section class="container py-4">
+        <div class="inter-company-nav-wrapper text-center" data-aos="fade-up">
+            <h5 class="fw-bold mb-1">Explore Other Giga Group Sister Concerns</h5>
+            <p class="text-muted small mb-3">Move between our specialized operating companies with one click:</p>
+            
+            <div class="inter-company-pills">
+                <a href="giga-soft.html" class="company-nav-pill">Giga Soft Limited</a>\n                        <a href="giga-digital-agency.html" class="company-nav-pill">Giga Digital Agency</a>\n                        <a href="pc-care.html" class="company-nav-pill active">PC Care & Engineering Limited</a>\n                        <a href="giga-food.html" class="company-nav-pill">Giga Food Limited</a>\n                        <a href="krishi-beez-bank.html" class="company-nav-pill">Krishi Beez Bank</a>\n                        <a href="giga-enterprise.html" class="company-nav-pill">Giga Enterprise</a>\n                        <a href="rider-service.html" class="company-nav-pill">Rider Service Limited</a>\n                        <a href="tender-barta.html" class="company-nav-pill">Tender Barta</a>\n                        <a href="giga-shop.html" class="company-nav-pill">Giga Shop Limited</a>\n                        <a href="giga-foundation.html" class="company-nav-pill">Giga Foundation</a>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                <a href="giga-digital-agency.html" class="btn btn-outline-secondary btn-sm fw-semibold">
+                    &larr; Previous: Giga Digital Agency
+                </a>
+                <a href="index.html#our_companies" class="btn btn-danger btn-sm fw-bold">
+                    View All 10 Concerns
+                </a>
+                <a href="giga-food.html" class="btn btn-outline-secondary btn-sm fw-semibold">
+                    Next: Giga Food Limited &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specific Corporate Inquiry Form -->
+    <section class="py-5 bg-light" id="inquiry">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="p-4 p-md-5 bg-white border rounded-4 shadow-sm">
+                        <div class="text-center mb-4">
+                            <span class="badge bg-danger-subtle text-danger px-3 py-2 text-uppercase fw-bold mb-2">Direct Inquiry Desk</span>
+                            <h3 class="fw-bold">Contact PC Care & Engineering Limited</h3>
+                            <p class="text-secondary small">Direct inquiry will be routed to the specialized operating team for PC Care & Engineering Limited.</p>
+                        </div>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Inquiry received for PC Care & Engineering Limited! Our representative will contact you within 24 business hours.');">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Your Full Name *</label>
+                                    <input type="text" class="form-control" required placeholder="Tariq Ahmed">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Corporate Email Address *</label>
+                                    <input type="email" class="form-control" required placeholder="tariq@institution.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Phone / WhatsApp *</label>
+                                    <input type="text" class="form-control" required placeholder="+880 17XX-XXXXXX">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Organization / Firm</label>
+                                    <input type="text" class="form-control" placeholder="Company Name">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-semibold">Project Scope &amp; Requirements *</label>
+                                    <textarea class="form-control" rows="4" required placeholder="Describe your required scope, quantities, or technical requirements for PC Care & Engineering Limited..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-danger btn-lg px-5 fw-bold">
+                                        Send Message to PC Care & Engineering Limited &rarr;
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex_container footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-brand-box">
+                        <img src='assets/images/logo/logo.png' alt="Giga Group" class="footer-logo mb-3">
+                        <p class="sub_title text-muted small pe-lg-4">
+                            Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 specialized companies spanning enterprise software, media, agriculture, logistics, and social welfare.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-7">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li><a href="giga-soft.html" class="fw-bold text-danger">Giga Soft Limited ↗</a></li>
+                                <li><a href="giga-digital-agency.html" class="fw-bold text-danger">Giga Digital Agency ↗</a></li>
+                                <li><a href="pc-care.html">PC Care &amp; Engineering</a></li>
+                                <li><a href="giga-food.html">Giga Food Limited</a></li>
+                                <li><a href="krishi-beez-bank.html">Krishi Beez Bank</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li><a href="giga-enterprise.html">Giga Enterprise</a></li>
+                                <li><a href="rider-service.html">Rider Service Limited</a></li>
+                                <li><a href="tender-barta.html">Tender Barta</a></li>
+                                <li><a href="giga-shop.html">Giga Shop Limited</a></li>
+                                <li><a href="giga-foundation.html">Giga Foundation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Corporate Headquarters</h5>
+                    <ul class="list-unstyled footer-contact-list small text-muted">
+                        <li class="mb-2"><strong>Address:</strong> 46, Kazi Nazrul Islam Avenue, Kawran Bazar, Dhaka-1215, Bangladesh.</li>
+                        <li class="mb-2"><strong>Phone:</strong> <a href="tel:+8801778741894" class="text-decoration-none text-muted">+88-01778-741894</a></li>
+                        <li class="mb-2"><strong>Email:</strong> <a href="mailto:gigagroupbd@gmail.com" class="text-decoration-none text-muted">gigagroupbd@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_border border-top pt-3 mt-3"></div>
+            <div class="row align-items-center footer_copyright pt-2">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright text-muted small mb-0">Copyright © 2024 Giga Group of Bangladesh. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">
+                        Operating Entity: <span class="fw-semibold text-danger">PC Care & Engineering Limited</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
