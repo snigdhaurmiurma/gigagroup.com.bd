@@ -26,20 +26,20 @@
           
           var dBtn = document.getElementById('themeToggleBtn');
           var mBtn = document.getElementById('mobileThemeToggleBtn');
+          var isD = (next === 'dark');
+          var ic = isD ? '🌙' : '☀️';
+          var tt = isD ? 'Switch to Light Mode' : 'Switch to Dark Mode';
           if (dBtn) {
             var icon = dBtn.querySelector('.theme-icon');
-            var label = dBtn.querySelector('.theme-label');
-            if (next === 'dark') {
-              if (icon) icon.textContent = '🌙';
-              if (label) label.textContent = 'Dark';
-            } else {
-              if (icon) icon.textContent = '☀️';
-              if (label) label.textContent = 'Light';
-            }
+            if (icon) icon.textContent = ic;
+            dBtn.setAttribute('title', tt);
+            dBtn.setAttribute('aria-label', tt);
           }
           if (mBtn) {
             var mIcon = mBtn.querySelector('.theme-icon');
-            if (mIcon) mIcon.textContent = (next === 'dark') ? '🌙' : '☀️';
+            if (mIcon) mIcon.textContent = ic;
+            mBtn.setAttribute('title', tt);
+            mBtn.setAttribute('aria-label', tt);
           }
         };
       })();
@@ -61,9 +61,7 @@
                     </a>
                     
                     <div class="d-flex align-items-center d-xl-none">
-                        <button class="theme-toggle-btn me-2" id="mobileThemeToggleBtn" aria-label="Toggle theme" onclick="document.getElementById('themeToggleBtn').click()">
-                            <span class="theme-icon">🌙</span>
-                        </button>
+                        <button class="theme-toggle-btn me-2 align-items-center justify-content-center" id="mobileThemeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode"><span class="theme-icon">🌙</span></button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -228,10 +226,7 @@
                         </ul>
                         
                         <div class="d-flex align-items-center">
-                            <button class="theme-toggle-btn d-none d-xl-flex align-items-center me-3" id="themeToggleBtn" aria-label="Toggle theme">
-                                <span class="theme-icon me-1">🌙</span>
-                                <span class="theme-label">Dark</span>
-                            </button>
+                            <button class="theme-toggle-btn d-none d-xl-flex align-items-center justify-content-center" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode"><span class="theme-icon">🌙</span></button>
                             <a href="index.html#our_companies" class="btn btn-danger btn-sm fw-bold">
                                 Sister Concerns
                             </a>
@@ -421,7 +416,10 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <p class="small text-muted mb-0">
-                            Leadership: <span class="fw-bold text-white">Md. Ashikur Rahman</span> (Chairman &amp; Managing Director)
+                            <a href="privacy-policy.html" class="text-decoration-none text-muted me-3 footer-policy-link">Privacy Policy</a>
+                            <a href="privacy-policy.html#terms" class="text-decoration-none text-muted me-3 footer-policy-link">Terms of Use</a>
+                            <span class="text-muted opacity-50">&bull;</span>
+                            <span class="ms-3 text-muted">Dhaka, Bangladesh</span>
                         </p>
                     </div>
                 </div>

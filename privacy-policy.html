@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Terms of Service | Giga Group of Bangladesh</title>
+    <meta name="description" content="Official Privacy Policy and Terms of Use for Giga Group of Bangladesh and its 10 operating companies.">
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+    <!-- Instant Theme Initializer & Global Handler -->
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('giga_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        window.toggleTheme = function() {
+          var html = document.documentElement;
+          var cur = html.getAttribute('data-theme') || 'dark';
+          var next = (cur === 'dark') ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          if (document.body) {
+            document.body.classList.remove('dark-theme', 'light-theme');
+            document.body.classList.add(next + '-theme');
+          }
+          localStorage.setItem('giga_theme', next);
+          
+          var dBtn = document.getElementById('themeToggleBtn');
+          var mBtn = document.getElementById('mobileThemeToggleBtn');
+          if (dBtn) {
+            var icon = dBtn.querySelector('.theme-icon');
+            if (icon) icon.textContent = (next === 'dark') ? '🌙' : '☀️';
+            dBtn.setAttribute('title', (next === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+            dBtn.setAttribute('aria-label', (next === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+          }
+          if (mBtn) {
+            var mIcon = mBtn.querySelector('.theme-icon');
+            if (mIcon) mIcon.textContent = (next === 'dark') ? '🌙' : '☀️';
+            mBtn.setAttribute('title', (next === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+            mBtn.setAttribute('aria-label', (next === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+          }
+        };
+      })();
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/company-pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="flex_container header_container bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-xl-4 px-2 padding_0">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light py-2">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo/logo.png" alt="Giga Group" class="brand-logo-img">
+                    </a>
+                    
+                    <div class="d-flex align-items-center d-xl-none">
+                        <button class="theme-toggle-btn me-2 align-items-center justify-content-center" id="mobileThemeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode" onclick="document.getElementById('themeToggleBtn').click()">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav align-items-xl-center mx-auto my-2 my-lg-0 nav-menu-list">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about_us">About Us</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle" href="index.html#our_companies" id="companiesMegaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Our Companies
+                                </a>
+                                <div class="dropdown-menu mega-menu-content shadow-2xl border-0 p-4" aria-labelledby="companiesMegaDropdown">
+                                    <div class="container-fluid">
+                                        <div class="row g-4">
+                                            <!-- Col 1: Left - Technology & Creative -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-danger-subtle text-danger px-2 py-1 small fw-bold">TECHNOLOGY &amp; CREATIVE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-soft.html" class="mega-link-item">
+                                                            <span class="mega-icon">💻</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Soft Limited</div>
+                                                                <div class="mega-link-desc">Enterprise software &amp; Cloud ERP</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-digital-agency.html" class="mega-link-item">
+                                                            <span class="mega-icon">🚀</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Digital Agency</div>
+                                                                <div class="mega-link-desc">Growth marketing &amp; 3D creative branding</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pc-care.html" class="mega-link-item">
+                                                            <span class="mega-icon">🔧</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">PC Care &amp; Engineering</div>
+                                                                <div class="mega-link-desc">Enterprise hardware AMC &amp; servers</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tender-barta.html" class="mega-link-item">
+                                                            <span class="mega-icon">📋</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Tender Barta</div>
+                                                                <div class="mega-link-desc">National procurement &amp; tender portal</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Col 2: Center - Food, Agri & Commerce -->
+                                            <div class="col-lg-4 col-md-12 mega-col border-end-lg">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-success-subtle text-success px-2 py-1 small fw-bold">FOOD &amp; COMMERCE</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-food.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌾</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Food Limited</div>
+                                                                <div class="mega-link-desc">Certified organic foods &amp; commodities</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="krishi-beez-bank.html" class="mega-link-item">
+                                                            <span class="mega-icon">🌱</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Krishi Beez Bank</div>
+                                                                <div class="mega-link-desc">Certified high-yield agro seeds</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-shop.html" class="mega-link-item">
+                                                            <span class="mega-icon">🛒</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Shop Limited</div>
+                                                                <div class="mega-link-desc">Omnichannel retail distribution</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Col 3: Right - Logistics, Trading & CSR -->
+                                            <div class="col-lg-4 col-md-12 mega-col">
+                                                <div class="mega-section-header mb-3">
+                                                    <span class="badge bg-primary-subtle text-primary px-2 py-1 small fw-bold">LOGISTICS &amp; IMPACT</span>
+                                                </div>
+                                                <ul class="list-unstyled mega-list">
+                                                    <li>
+                                                        <a href="giga-enterprise.html" class="mega-link-item">
+                                                            <span class="mega-icon">🏗️</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Enterprise</div>
+                                                                <div class="mega-link-desc">Industrial import, export &amp; supply</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="rider-service.html" class="mega-link-item">
+                                                            <span class="mega-icon">🚚</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Rider Service Limited</div>
+                                                                <div class="mega-link-desc">64-district cold-chain logistics</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="giga-foundation.html" class="mega-link-item">
+                                                            <span class="mega-icon">🤝</span>
+                                                            <div class="mega-link-info">
+                                                                <div class="mega-link-title">Giga Foundation</div>
+                                                                <div class="mega-link-desc">National education, youth skills &amp; CSR</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="mega-cta-box p-3 rounded-3 mt-3">
+                                                    <div class="fw-bold text-danger small mb-1">Corporate Directory</div>
+                                                    <p class="text-muted small mb-2">View complete operating structure.</p>
+                                                    <a href="index.html#our_companies" class="btn btn-danger btn-sm w-100 fw-bold">View All 10 Concerns &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#chairman_desk">Chairman's Desk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#blogs">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex align-items-center">
+                            <button class="theme-toggle-btn d-none d-xl-flex align-items-center justify-content-center" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                                <span class="theme-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header Hero -->
+    <section class="py-5 text-white position-relative" style="background: linear-gradient(135deg, #0B132B 0%, #151D2C 60%, rgba(243, 101, 35, 0.4) 100%);">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <span class="badge px-3 py-2 text-uppercase fw-bold mb-3" style="background: rgba(243, 101, 35, 0.2); border: 1px solid #F36523; color: #FF9E66;">
+                        Legal &amp; Regulatory Compliance
+                    </span>
+                    <h1 class="display-5 fw-bold text-white mb-2">Privacy Policy &amp; Terms of Use</h1>
+                    <p class="lead text-white-50 mb-0">
+                        Transparency, data governance, and uncompromising ethical stewardship across Giga Group of Bangladesh and its 10 operating entities.
+                    </p>
+                    <p class="small text-white-50 mt-2">
+                        Effective Date: November 2024 &bull; Version 2.4 &bull; Applicable across all 64 districts of Bangladesh
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="py-5" style="background-color: var(--bg-page);">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Navigation anchor sidebar -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="sticky-top p-4 rounded-3 shadow-sm border" style="top: 100px; background: var(--card-bg); border-color: var(--card-border) !important;">
+                        <h6 class="fw-bold mb-3" style="color: #F36523;">Quick Navigation</h6>
+                        <ul class="nav flex-column gap-2 small">
+                            <li class="nav-item"><a href="#scope" class="text-decoration-none text-muted">1. Scope &amp; Commitment</a></li>
+                            <li class="nav-item"><a href="#collection" class="text-decoration-none text-muted">2. Information Collection</a></li>
+                            <li class="nav-item"><a href="#usage" class="text-decoration-none text-muted">3. How Information Is Used</a></li>
+                            <li class="nav-item"><a href="#subsidiaries" class="text-decoration-none text-muted">4. Subsidiary Data Sharing</a></li>
+                            <li class="nav-item"><a href="#security" class="text-decoration-none text-muted">5. Security &amp; Encryption</a></li>
+                            <li class="nav-item"><a href="#cookies" class="text-decoration-none text-muted">6. Cookies &amp; Tracking</a></li>
+                            <li class="nav-item"><a href="#terms" class="text-decoration-none text-muted">7. Terms of Use &amp; IP</a></li>
+                            <li class="nav-item"><a href="#contact-officer" class="text-decoration-none text-muted">8. Data Protection Officer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Legal Terms Content -->
+                <div class="col-lg-9">
+                    <div class="p-4 p-md-5 rounded-3 shadow-sm border" style="background: var(--card-bg); border-color: var(--card-border) !important;">
+                        
+                        <!-- Section 1 -->
+                        <section id="scope" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">1. Scope &amp; Corporate Commitment</h3>
+                            <p class="text-muted">
+                                Giga Group of Bangladesh ("Giga Group", "we", "our", or "us") operates as a multifaceted commercial conglomerate orchestrating ten operating companies across enterprise software, creative marketing, agricultural sovereignty, commodities, logistics, and social foundation.
+                            </p>
+                            <p class="text-muted">
+                                This Privacy Policy outlines our principles regarding the gathering, utilization, storage, and safeguarding of personal and commercial data collected through our corporate portal (<strong>gigagroup.com.bd</strong>), digital applications, client inquiry systems, and enterprise portals. We comply strictly with the laws of the People's Republic of Bangladesh, including the Information and Communication Technology (ICT) Act, the Digital Security Act, and international data protection standards.
+                            </p>
+                        </section>
+
+                        <!-- Section 2 -->
+                        <section id="collection" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">2. Information We Collect</h3>
+                            <p class="text-muted">We only collect data necessary to provide high-quality enterprise solutions, business partnerships, customer service, and regulatory compliance:</p>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-2 border h-100" style="background: rgba(243, 101, 35, 0.04); border-color: rgba(243, 101, 35, 0.2) !important;">
+                                        <h6 class="fw-bold mb-2" style="color: #F36523;">A. Voluntary Business Inquiries</h6>
+                                        <p class="small text-muted mb-0">Names, official email addresses, corporate telephone numbers, designation, and enterprise project scopes submitted through our RFQ, partnership, or contact forms.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-2 border h-100" style="background: rgba(0, 98, 255, 0.04); border-color: rgba(0, 98, 255, 0.2) !important;">
+                                        <h6 class="fw-bold mb-2 text-primary">B. Technical &amp; Operational Metadata</h6>
+                                        <p class="small text-muted mb-0">Browser specifications, IP addresses, access timestamps, referral sources, and page interaction metrics collected to optimize platform speed and prevent unauthorized intrusions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3 -->
+                        <section id="usage" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">3. How Information Is Used</h3>
+                            <ul class="text-muted ps-3">
+                                <li class="mb-2"><strong>Enterprise Service Delivery:</strong> Providing custom cloud ERP configurations, digital campaign executions, hardware servicing, or cold-chain logistics routing.</li>
+                                <li class="mb-2"><strong>Client Communications:</strong> Responding to tenders, requests for proposals (RFP), technical support tickets, and corporate milestone announcements.</li>
+                                <li class="mb-2"><strong>Fraud Prevention &amp; Security:</strong> Monitoring network integrity, preventing denial-of-service attempts, and auditing system access logs.</li>
+                                <li class="mb-2"><strong>Legal Compliance:</strong> Adhering to statutory tax, corporate auditing, and legal regulatory disclosure obligations under Bangladesh government directives.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Section 4 -->
+                        <section id="subsidiaries" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">4. Subsidiary Inter-Company Data Handling</h3>
+                            <p class="text-muted">
+                                Giga Group consists of 10 operating subsidiaries: <em>Giga Soft Limited, Giga Digital Agency, PC Care &amp; Engineering, Tender Barta, Giga Food Limited, Krishi Beez Bank, Giga Shop Limited, Giga Enterprise, Rider Service Limited, and Giga Foundation</em>.
+                            </p>
+                            <p class="text-muted">
+                                When you initiate a business inquiry intended for a specific concern (e.g. requesting software architecture from Giga Soft or logistics fulfillment via Rider Service), relevant project parameters are shared securely with the respective operating unit. We <strong>never sell, lease, or monetize</strong> client or partner data to third-party commercial brokers under any circumstance.
+                            </p>
+                        </section>
+
+                        <!-- Section 5 -->
+                        <section id="security" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">5. Security Safeguards &amp; Data Retention</h3>
+                            <p class="text-muted">
+                                We implement multi-layered institutional safeguards, including 256-bit SSL/TLS end-to-end transport encryption, firewalled server clusters, access-controlled databases, and routine vulnerability audits. Corporate records are retained only for the duration necessary to satisfy contractual, operational, and statutory requirements.
+                            </p>
+                        </section>
+
+                        <!-- Section 6 -->
+                        <section id="cookies" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">6. Cookie Policy</h3>
+                            <p class="text-muted">
+                                Our website utilizes essential cookies to preserve your theme preference (Dark Mode or Light Mode) and ensure seamless navigation across our sister concern directory. These functional cookies do not extract private personal information and can be managed directly via your browser preferences.
+                            </p>
+                        </section>
+
+                        <!-- Section 7 -->
+                        <section id="terms" class="mb-5 pb-4 border-bottom">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">7. Terms of Use &amp; Intellectual Property</h3>
+                            <p class="text-muted">
+                                All intellectual property, trademarks, logos, diagrams, case studies, software descriptions, and brand assets displayed on <strong>gigagroup.com.bd</strong> are the exclusive property of Giga Group of Bangladesh. Unauthorized reproduction, modification, scraping, or distribution of our proprietary content without explicit prior written authorization is strictly prohibited under copyright laws.
+                            </p>
+                        </section>
+
+                        <!-- Section 8 -->
+                        <section id="contact-officer">
+                            <h3 class="fw-bold mb-3" style="color: var(--text-heading);">8. Data Protection &amp; Compliance Office</h3>
+                            <p class="text-muted">
+                                If you have inquiries, data deletion requests, or require further clarification regarding our corporate privacy practices, please contact our Legal &amp; Compliance Directorate:
+                            </p>
+                            <div class="p-3 rounded-2 border" style="background: var(--bg-page); border-color: var(--card-border) !important;">
+                                <div class="fw-bold" style="color: var(--text-heading);">Giga Group Corporate Headquarters</div>
+                                <div class="text-muted small">House #02, Road #04, Block-F, Banani, Dhaka-1213, Bangladesh</div>
+                                <div class="text-muted small mt-1">Direct Hotline: +880 1700-000000 &bull; Email: legal@gigagroup.com.bd</div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg_image_holder py-5" style="background-color: #0b132b; color: #fff;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-brand-box">
+                        <a href="index.html" class="d-inline-block mb-3">
+                            <img src='assets/images/logo/logo.png' alt="Giga Group" class="footer-logo">
+                        </a>
+                        <p class="sub_title text-muted small pe-lg-4 mb-4">
+                            Giga Group of Bangladesh is a multifaceted business federation orchestrating 10 operating concerns spanning enterprise software, creative marketing, agricultural sovereignty, pure food processing, and institutional logistics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Center - Sister Concerns Directory -->
+                <div class="col-lg-5 col-md-7">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Sister Concerns Directory</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li class="mb-2"><a href="giga-soft.html" class="text-danger fw-bold">Giga Soft Limited ↗</a></li>
+                                <li class="mb-2"><a href="giga-digital-agency.html" class="text-danger fw-bold">Giga Digital Agency ↗</a></li>
+                                <li class="mb-2"><a href="pc-care.html" class="text-white text-opacity-75">PC Care &amp; Engineering</a></li>
+                                <li class="mb-2"><a href="tender-barta.html" class="text-white text-opacity-75">Tender Barta</a></li>
+                                <li class="mb-2"><a href="giga-food.html" class="text-white text-opacity-75">Giga Food Limited</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links-list small">
+                                <li class="mb-2"><a href="krishi-beez-bank.html" class="text-white text-opacity-75">Krishi Beez Bank</a></li>
+                                <li class="mb-2"><a href="giga-shop.html" class="text-white text-opacity-75">Giga Shop Limited</a></li>
+                                <li class="mb-2"><a href="giga-enterprise.html" class="text-white text-opacity-75">Giga Enterprise</a></li>
+                                <li class="mb-2"><a href="rider-service.html" class="text-white text-opacity-75">Rider Service Limited</a></li>
+                                <li class="mb-2"><a href="giga-foundation.html" class="text-white text-opacity-75">Giga Foundation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Right - Corporate HQ -->
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="footer_header fw-bold text-danger mb-3">Headquarters</h5>
+                    <p class="text-muted small mb-2">Dhaka, Bangladesh</p>
+                    <p class="text-muted small mb-2">Email: contact@gigagroup.com.bd</p>
+                    <p class="text-muted small mb-3">Hotline: +880 1700-000000</p>
+                    <a href="contact.html" class="btn btn-outline-danger btn-sm">Corporate Inquiries &rarr;</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar border-top pt-3 mt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p class="copyright text-muted small mb-0">
+                            &copy; 2024 Giga Group of Bangladesh. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small text-muted mb-0">
+                            <a href="privacy-policy.html" class="text-decoration-none text-muted me-3 footer-policy-link">Privacy Policy</a>
+                            <a href="privacy-policy.html#terms" class="text-decoration-none text-muted me-3 footer-policy-link">Terms of Use</a>
+                            <span class="text-muted opacity-50">&bull;</span>
+                            <span class="ms-3 text-muted">Dhaka, Bangladesh</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
