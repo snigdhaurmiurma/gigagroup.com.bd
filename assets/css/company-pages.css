@@ -1059,3 +1059,153 @@ body.light-theme .company-stat-card p,
 [data-theme="light"] .company-stat-card p {
   color: #64748b;
 }
+
+/* ==========================================================================
+   BLOG / NEWS CARDS & CASE STUDY CARDS THEME STYLING
+   ========================================================================== */
+.blog-card-enhanced,
+.case-study-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #e2e8f0) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.blog-card-enhanced:hover,
+.case-study-card:hover {
+  transform: translateY(-6px);
+  border-color: #F36523 !important;
+  box-shadow: 0 20px 40px rgba(243, 101, 35, 0.2) !important;
+}
+
+/* Light Theme Card Colors */
+[data-theme="light"] .blog-card-enhanced,
+[data-theme="light"] .case-study-card,
+body.light-theme .blog-card-enhanced,
+body.light-theme .case-study-card {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .blog-card-enhanced h5,
+[data-theme="light"] .case-study-card h4,
+body.light-theme .blog-card-enhanced h5,
+body.light-theme .case-study-card h4 {
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .blog-card-enhanced .date,
+body.light-theme .blog-card-enhanced .date {
+  color: #64748B !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="light"] .blog-card-enhanced p,
+[data-theme="light"] .blog-card-enhanced .text-secondary,
+[data-theme="light"] .case-study-card p,
+[data-theme="light"] .case-study-card .text-secondary,
+body.light-theme .blog-card-enhanced p,
+body.light-theme .blog-card-enhanced .text-secondary,
+body.light-theme .case-study-card p,
+body.light-theme .case-study-card .text-secondary {
+  color: #334155 !important;
+}
+
+/* Dark Theme Card Colors */
+[data-theme="dark"] .blog-card-enhanced,
+[data-theme="dark"] .case-study-card,
+body.dark-theme .blog-card-enhanced,
+body.dark-theme .case-study-card {
+  background-color: #151D2C !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .blog-card-enhanced h5,
+[data-theme="dark"] .case-study-card h4,
+body.dark-theme .blog-card-enhanced h5,
+body.dark-theme .case-study-card h4 {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .blog-card-enhanced .date,
+body.dark-theme .blog-card-enhanced .date {
+  color: #94A3B8 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .blog-card-enhanced p,
+[data-theme="dark"] .blog-card-enhanced .text-secondary,
+[data-theme="dark"] .case-study-card p,
+[data-theme="dark"] .case-study-card .text-secondary,
+body.dark-theme .blog-card-enhanced p,
+body.dark-theme .blog-card-enhanced .text-secondary,
+body.dark-theme .case-study-card p,
+body.dark-theme .case-study-card .text-secondary {
+  color: #CBD5E1 !important;
+}
+
+/* Contact Section & Chairman Section Theming */
+[data-theme="dark"] .contact-info-card,
+[data-theme="dark"] .contact-form-box,
+[data-theme="dark"] .chairman-portrait-wrapper,
+body.dark-theme .contact-info-card,
+body.dark-theme .contact-form-box,
+body.dark-theme .chairman-portrait-wrapper {
+  background-color: #151D2C !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .contact-info-card h6,
+[data-theme="dark"] .contact-form-box h4,
+[data-theme="dark"] .contact-form-box label,
+[data-theme="dark"] .chairman-portrait-wrapper h3,
+body.dark-theme .contact-info-card h6,
+body.dark-theme .contact-form-box h4,
+body.dark-theme .contact-form-box label,
+body.dark-theme .chairman-portrait-wrapper h3 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .contact-info-card p,
+[data-theme="dark"] .contact-info-card a,
+[data-theme="dark"] .chairman-statement-content ul,
+body.dark-theme .contact-info-card p,
+body.dark-theme .contact-info-card a,
+body.dark-theme .chairman-statement-content ul {
+  color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] .contact-form-box input,
+[data-theme="dark"] .contact-form-box select,
+[data-theme="dark"] .contact-form-box textarea,
+body.dark-theme .contact-form-box input,
+body.dark-theme .contact-form-box select,
+body.dark-theme .contact-form-box textarea {
+  background-color: #0F172A !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .contact-info-card,
+[data-theme="light"] .contact-form-box,
+[data-theme="light"] .chairman-portrait-wrapper,
+body.light-theme .contact-info-card,
+body.light-theme .contact-form-box,
+body.light-theme .chairman-portrait-wrapper {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+[data-theme="light"] .contact-info-card h6,
+[data-theme="light"] .contact-form-box h4,
+[data-theme="light"] .contact-form-box label,
+[data-theme="light"] .chairman-portrait-wrapper h3,
+body.light-theme .contact-info-card h6,
+body.light-theme .contact-form-box h4,
+body.light-theme .contact-form-box label,
+body.light-theme .chairman-portrait-wrapper h3 {
+  color: #0F172A !important;
+}
